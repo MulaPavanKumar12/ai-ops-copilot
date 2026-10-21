@@ -1,0 +1,35 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Setup (Windows)",
+      "type": "shell",
+      "command": "powershell -ExecutionPolicy Bypass -File scripts/setup.ps1",
+      "problemMatcher": []
+    },
+    {
+      "label": "Setup (macOS/Linux)",
+      "type": "shell",
+      "command": "bash scripts/setup.sh",
+      "problemMatcher": []
+    },
+    {
+      "label": "Run live system (Windows)",
+      "type": "shell",
+      "command": "powershell -ExecutionPolicy Bypass -File scripts/run_local.ps1",
+      "problemMatcher": []
+    },
+    {
+      "label": "Docker: start stack",
+      "type": "shell",
+      "command": "docker compose up -d --build",
+      "problemMatcher": []
+    },
+    {
+      "label": "Docker: stop stack",
+      "type": "shell",
+      "command": "docker compose down",
+      "problemMatcher": []
+    }
+  ]
+}

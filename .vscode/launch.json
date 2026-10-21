@@ -1,0 +1,143 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "1. Run all tests",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "pytest",
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src"
+      },
+      "console": "integratedTerminal",
+      "args": [
+        "-v"
+      ]
+    },
+    {
+      "name": "2. Train + evaluate detectors",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "aiops_copilot.evaluation.run_detection",
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src"
+      },
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "3. Build RAG knowledge base",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "aiops_copilot.rag.build",
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src"
+      },
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "4. Evaluate root-cause analysis",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "aiops_copilot.evaluation.run_rca",
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src"
+      },
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Simulator (:8001)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "aiops_copilot.simulator",
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src"
+      },
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "API (:8000)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "aiops_copilot.api",
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src"
+      },
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Worker (detection + RCA + alerts)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "aiops_copilot.pipeline.worker",
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src"
+      },
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Dashboard (:8501)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "streamlit",
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src"
+      },
+      "console": "integratedTerminal",
+      "args": [
+        "run",
+        "dashboard/app.py",
+        "--browser.gatherUsageStats=false"
+      ]
+    },
+    {
+      "name": "Generate synthetic dataset (24h)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "aiops_copilot.generator",
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src"
+      },
+      "console": "integratedTerminal",
+      "args": [
+        "generate"
+      ]
+    },
+    {
+      "name": "Show dataset summary",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "aiops_copilot.generator",
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src"
+      },
+      "console": "integratedTerminal",
+      "args": [
+        "summary",
+        "--examples",
+        "1"
+      ]
+    }
+  ],
+  "compounds": [
+    {
+      "name": "5. Live system (simulator + API + worker + dashboard)",
+      "configurations": [
+        "Simulator (:8001)",
+        "API (:8000)",
+        "Worker (detection + RCA + alerts)",
+        "Dashboard (:8501)"
+      ],
+      "stopAll": true
+    }
+  ]
+}

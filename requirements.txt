@@ -1,0 +1,32 @@
+# Runtime dependencies (Python 3.11+). Install with:  pip install -r requirements.txt
+# Tip (Linux, no GPU): install the small CPU build of PyTorch first:
+#   pip install torch --index-url https://download.pytorch.org/whl/cpu
+
+# Core / data
+numpy>=1.26,<3
+pandas>=2.1,<4
+pydantic>=2.6,<3
+pydantic-settings>=2.2,<3
+python-dotenv>=1.0,<2
+
+# Services
+fastapi>=0.110,<1
+uvicorn[standard]>=0.29,<1
+httpx>=0.27,<1
+prometheus-client>=0.20,<1
+
+# Machine learning
+scikit-learn>=1.4,<2
+joblib>=1.3,<2
+torch>=2.2,<3
+
+# RAG + LLM
+chromadb>=0.5,<2
+anthropic>=2.0,<3
+
+# Storage
+SQLAlchemy>=2.0,<3
+psycopg[binary]>=3.1,<4
+
+# Dashboard
+streamlit>=1.40,<2

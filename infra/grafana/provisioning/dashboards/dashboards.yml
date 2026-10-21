@@ -1,0 +1,7 @@
+apiVersion: 1
+providers:
+  - name: aiops
+    folder: AI Ops Copilot
+    type: file
+    options:
+      path: /var/lib/grafana/dashboards

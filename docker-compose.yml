@@ -1,0 +1,149 @@
+# One-command stack:  docker compose up -d --build
+#
+#   dashboard   :8501  Streamlit UI (live fleet, incidents + RCA, model results, attack injection)
+#   api         :8000  FastAPI backend (docs at /docs)
+#   worker             real-time detection + RCA + alerts (trains models on first start, ~2 min)
+#   simulator   :8001  fake fleet -> /metrics (Prometheus), /api/v1/* (logs, incidents)
+#   prometheus  :9090  scrapes the simulator every 5s
+#   grafana     :3000  pre-provisioned "Fleet Overview" dashboard
+#   postgres    :5432  incidents, alerts and RCA runs
+#
+# Batch dataset (one-off):  docker compose --profile tools run --rm generator
+name: aiops-copilot
+
+x-app: &app
+  build: .
+  image: aiops-copilot:latest
+  restart: unless-stopped
+  env_file: .env
+
+x-app-env: &app-env
+  LOG_FORMAT: json
+  DATABASE_URL: postgresql+psycopg://${POSTGRES_USER:-aiops}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB:-aiops}
+  SIMULATOR_URL: http://simulator:8001
+  API_URL: http://api:8000
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-aiops}
+      POSTGRES_USER: ${POSTGRES_USER:-aiops}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
+    ports:
+      - "127.0.0.1:${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  simulator:
+    <<: *app
+    environment:
+      LOG_FORMAT: json
+      SIM_LOG_DIR: /app/data/live
+    ports:
+      - "127.0.0.1:${SIM_PORT:-8001}:8001"
+    volumes:
+      - simdata:/app/data/live
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request,sys; sys.exit(urllib.request.urlopen('http://localhost:8001/health', timeout=2).status != 200)"]
+      interval: 10s
+      timeout: 3s
+      retries: 10
+
+  api:
+    <<: *app
+    command: ["python", "-m", "aiops_copilot.api"]
+    environment: *app-env
+    ports:
+      - "127.0.0.1:${API_PORT:-8000}:8000"
+    volumes:
+      - appdata:/app/data
+      - models:/app/models
+      - reports:/app/reports
+    depends_on:
+      postgres:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request,sys; sys.exit(urllib.request.urlopen('http://localhost:8000/health', timeout=2).status != 200)"]
+      interval: 10s
+      timeout: 3s
+      retries: 10
+
+  worker:
+    <<: *app
+    command: ["python", "-m", "aiops_copilot.pipeline.worker"]
+    environment: *app-env
+    volumes:
+      - appdata:/app/data
+      - models:/app/models
+      - reports:/app/reports
+    depends_on:
+      api:
+        condition: service_healthy
+      simulator:
+        condition: service_healthy
+
+  dashboard:
+    <<: *app
+    command: ["streamlit", "run", "dashboard/app.py", "--server.address=0.0.0.0", "--server.port=8501",
+              "--server.headless=true", "--browser.gatherUsageStats=false"]
+    environment: *app-env
+    ports:
+      - "127.0.0.1:8501:8501"
+    depends_on:
+      api:
+        condition: service_healthy
+
+  prometheus:
+    image: prom/prometheus:v2.53.0
+    restart: unless-stopped
+    command:
+      - --config.file=/etc/prometheus/prometheus.yml
+      - --storage.tsdb.retention.time=7d
+    ports:
+      - "127.0.0.1:9090:9090"
+    volumes:
+      - ./infra/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+    depends_on:
+      simulator:
+        condition: service_healthy
+
+  grafana:
+    image: grafana/grafana:11.1.0
+    restart: unless-stopped
+    environment:
+      GF_SECURITY_ADMIN_USER: ${GRAFANA_ADMIN_USER:-admin}
+      GF_SECURITY_ADMIN_PASSWORD: ${GRAFANA_ADMIN_PASSWORD:?Set GRAFANA_ADMIN_PASSWORD in .env}
+      GF_USERS_ALLOW_SIGN_UP: "false"
+    ports:
+      - "127.0.0.1:3000:3000"
+    volumes:
+      - ./infra/grafana/provisioning:/etc/grafana/provisioning:ro
+      - ./infra/grafana/dashboards:/var/lib/grafana/dashboards:ro
+    depends_on:
+      - prometheus
+
+  generator:
+    image: aiops-copilot:latest
+    profiles: ["tools"]
+    # Write files into ./data as your own user (Linux). Docker Desktop ignores this.
+    user: "${HOST_UID:-1000}:${HOST_GID:-1000}"
+    env_file: .env
+    environment:
+      GEN_OUTPUT_DIR: /app/data/synthetic
+    volumes:
+      - ./data:/app/data
+    command: ["python", "-m", "aiops_copilot.generator", "generate"]
+
+volumes:
+  pgdata:
+  simdata:
+  appdata:
+  models:
+  reports:

@@ -1,0 +1,219 @@
+{
+  "meta": {
+    "generated_at": "2026-10-21T18:02:57.294344+00:00",
+    "quick": false,
+    "train_rows": 60480,
+    "validation_rows": 17280,
+    "test_rows": 25920,
+    "test_incidents": 42,
+    "hosts": 6,
+    "test_days": 2.9993055555555554,
+    "train_seconds": 17.1,
+    "scoring_ms_per_row": 0.1038,
+    "detected_incidents": 60,
+    "triage_type_accuracy": 0.93,
+    "torch_available": true,
+    "lstm_loss_history": [
+      0.60836,
+      0.49179,
+      0.4216,
+      0.40007,
+      0.38843,
+      0.38453,
+      0.38158,
+      0.37923
+    ]
+  },
+  "detectors": [
+    {
+      "detector": "Z-score baseline",
+      "point": {
+        "tp": 1872,
+        "fp": 162,
+        "fn": 259,
+        "tn": 23627,
+        "precision": 0.9204,
+        "recall": 0.8785,
+        "f1": 0.8989
+      },
+      "events": {
+        "incidents": 42,
+        "detected": 40,
+        "event_recall": 0.9524,
+        "mean_time_to_detect_min": 5.47,
+        "median_time_to_detect_min": 2.0,
+        "false_alarm_events": 11,
+        "false_alarms_per_day": 3.67,
+        "recall_by_type": {
+          "cpu_spike": 1.0,
+          "data_exfiltration": 1.0,
+          "disk_fill": 1.0,
+          "error_burst": 1.0,
+          "latency_degradation": 1.0,
+          "memory_leak": 1.0,
+          "privilege_escalation": 0.5,
+          "ssh_brute_force": 1.0,
+          "suspicious_process": 1.0,
+          "traffic_surge": 1.0
+        },
+        "recall_by_category": {
+          "operational": 1.0,
+          "security": 0.882
+        }
+      },
+      "threshold": 4.19609
+    },
+    {
+      "detector": "Isolation Forest",
+      "point": {
+        "tp": 1549,
+        "fp": 462,
+        "fn": 582,
+        "tn": 23327,
+        "precision": 0.7703,
+        "recall": 0.7269,
+        "f1": 0.7479
+      },
+      "events": {
+        "incidents": 42,
+        "detected": 42,
+        "event_recall": 1.0,
+        "mean_time_to_detect_min": 7.83,
+        "median_time_to_detect_min": 2.5,
+        "false_alarm_events": 98,
+        "false_alarms_per_day": 32.67,
+        "recall_by_type": {
+          "cpu_spike": 1.0,
+          "data_exfiltration": 1.0,
+          "disk_fill": 1.0,
+          "error_burst": 1.0,
+          "latency_degradation": 1.0,
+          "memory_leak": 1.0,
+          "privilege_escalation": 1.0,
+          "ssh_brute_force": 1.0,
+          "suspicious_process": 1.0,
+          "traffic_surge": 1.0
+        },
+        "recall_by_category": {
+          "operational": 1.0,
+          "security": 1.0
+        }
+      },
+      "threshold": 0.497964
+    },
+    {
+      "detector": "LSTM autoencoder",
+      "point": {
+        "tp": 1743,
+        "fp": 319,
+        "fn": 388,
+        "tn": 23470,
+        "precision": 0.8453,
+        "recall": 0.8179,
+        "f1": 0.8314
+      },
+      "events": {
+        "incidents": 42,
+        "detected": 41,
+        "event_recall": 0.9762,
+        "mean_time_to_detect_min": 7.51,
+        "median_time_to_detect_min": 2.0,
+        "false_alarm_events": 38,
+        "false_alarms_per_day": 12.67,
+        "recall_by_type": {
+          "cpu_spike": 1.0,
+          "data_exfiltration": 1.0,
+          "disk_fill": 1.0,
+          "error_burst": 1.0,
+          "latency_degradation": 1.0,
+          "memory_leak": 1.0,
+          "privilege_escalation": 0.75,
+          "ssh_brute_force": 1.0,
+          "suspicious_process": 1.0,
+          "traffic_surge": 1.0
+        },
+        "recall_by_category": {
+          "operational": 1.0,
+          "security": 0.941
+        }
+      },
+      "threshold": 1.561367
+    },
+    {
+      "detector": "Security log rules",
+      "point": {
+        "tp": 352,
+        "fp": 0,
+        "fn": 1779,
+        "tn": 23789,
+        "precision": 1.0,
+        "recall": 0.1652,
+        "f1": 0.2835
+      },
+      "events": {
+        "incidents": 42,
+        "detected": 17,
+        "event_recall": 0.4048,
+        "mean_time_to_detect_min": 0.06,
+        "median_time_to_detect_min": 0.0,
+        "false_alarm_events": 0,
+        "false_alarms_per_day": 0.0,
+        "recall_by_type": {
+          "cpu_spike": 0.0,
+          "data_exfiltration": 1.0,
+          "disk_fill": 0.0,
+          "error_burst": 0.0,
+          "latency_degradation": 0.0,
+          "memory_leak": 0.0,
+          "privilege_escalation": 1.0,
+          "ssh_brute_force": 1.0,
+          "suspicious_process": 1.0,
+          "traffic_surge": 0.0
+        },
+        "recall_by_category": {
+          "operational": 0.0,
+          "security": 1.0
+        }
+      },
+      "threshold": null
+    },
+    {
+      "detector": "Hybrid (z-score + IF + LSTM + rules)",
+      "point": {
+        "tp": 1875,
+        "fp": 235,
+        "fn": 256,
+        "tn": 23554,
+        "precision": 0.8886,
+        "recall": 0.8799,
+        "f1": 0.8842
+      },
+      "events": {
+        "incidents": 42,
+        "detected": 42,
+        "event_recall": 1.0,
+        "mean_time_to_detect_min": 5.71,
+        "median_time_to_detect_min": 1.0,
+        "false_alarm_events": 17,
+        "false_alarms_per_day": 5.67,
+        "recall_by_type": {
+          "cpu_spike": 1.0,
+          "data_exfiltration": 1.0,
+          "disk_fill": 1.0,
+          "error_burst": 1.0,
+          "latency_degradation": 1.0,
+          "memory_leak": 1.0,
+          "privilege_escalation": 1.0,
+          "ssh_brute_force": 1.0,
+          "suspicious_process": 1.0,
+          "traffic_surge": 1.0
+        },
+        "recall_by_category": {
+          "operational": 1.0,
+          "security": 1.0
+        }
+      },
+      "threshold": 1.024346
+    }
+  ]
+}

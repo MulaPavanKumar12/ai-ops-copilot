@@ -1,0 +1,48 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Install dependencies (CPU-only PyTorch)
+        run: |
+          pip install torch --index-url https://download.pytorch.org/whl/cpu
+          pip install -r requirements-dev.txt
+      - name: Lint
+        run: ruff check src tests dashboard
+      - name: Type check
+        run: mypy
+      - name: Tests
+        run: pytest --cov=aiops_copilot --cov-report=term-missing
+      - name: Quick evaluation run (smoke test)
+        run: python -m aiops_copilot.evaluation.run_detection --quick --lstm-epochs 2
+        env:
+          DATA_DIR: /tmp/aiops/data
+          MODEL_DIR: /tmp/aiops/models
+          REPORTS_DIR: /tmp/aiops/reports
+
+  docker:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build image
+        run: docker build -t aiops-copilot:ci .
+      - name: Validate compose file
+        run: |
+          cp .env.example .env
+          docker compose config --quiet

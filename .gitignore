@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+
+# Secrets
+.env
+
+# Generated data and models
+data/
+!data/.gitkeep
+models/
+*.pt
+*.joblib
+
+# Editors / OS
+.idea/
+.DS_Store
+Thumbs.db
+logs/
+
+# Extra secrets / env variants (keep the example)
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+
+# More model / vector-store artifacts
+*.pkl
+*.onnx
+*.h5
+*.safetensors
+chroma/
+chroma_db/
+vectorstore/
+*.faiss
+
+# Misc
+node_modules/
+.ipynb_checkpoints/
+*.log
